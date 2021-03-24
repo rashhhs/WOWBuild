@@ -1,5 +1,6 @@
-import C, {boxShadow, classNames, extend, apply, theme} from 'consistencss';
-import Color from './Colors';
+import C, { boxShadow, classNames, extend, apply, theme } from 'consistencss'
+
+import Color from './Colors'
 
 export enum FontFamily {
   BLACK = 'Roboto-Black',
@@ -11,10 +12,10 @@ export enum FontFamily {
 
 extend({
   classes: {
-    letterzero: apply({letterSpacing: 0}),
-    lettertwo: apply({letterSpacing: 0.2}),
-    letterfour: apply({letterSpacing: 0.4}),
-    grow: apply({flexGrow: 1}),
+    letterzero: apply({ letterSpacing: 0 }),
+    lettertwo: apply({ letterSpacing: 0.2 }),
+    letterfour: apply({ letterSpacing: 0.4 }),
+    grow: apply({ flexGrow: 1 }),
   },
   colors: Color,
   fonts: {
@@ -29,7 +30,7 @@ extend({
     minimum: 1,
     double: 2,
   },
-});
+})
 
-export {C, boxShadow, classNames, extend, apply, theme};
-export default {C, boxShadow, classNames, extend, apply, theme};
+export { C, boxShadow, classNames, extend, apply, theme }
+export default { C, boxShadow, classNames, extend, apply, theme }

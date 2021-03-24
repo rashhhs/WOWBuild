@@ -1,6 +1,9 @@
-import React from 'react';
-import {apply, classNames} from '../../utils/styles';
-import {Text as RNText} from 'react-native';
+import React from 'react'
+import { Text as RNText } from 'react-native'
+
+import { TextColor } from '../../utils/Colors'
+import { apply, classNames } from '../../utils/styles'
+
 import {
   FontWeight,
   OnboardingTextProps,
@@ -8,8 +11,7 @@ import {
   TextAlign,
   TextProps,
   TextVariant,
-} from './Text.types';
-import {TextColor} from '../../utils/Colors';
+} from './Text.types'
 
 const Text = ({
   align,
@@ -25,10 +27,8 @@ const Text = ({
     style={apply(
       style,
       classNames('', {
-        'familyRobotoMedium font8 line9 letterfour':
-          variant === TextVariant.Hero,
-        'familyRobotoMedium line8 lettertwo':
-          variant === TextVariant.ExtraLarge,
+        'familyRobotoMedium font8 line9 letterfour': variant === TextVariant.Hero,
+        'familyRobotoMedium line8 lettertwo': variant === TextVariant.ExtraLarge,
         'familyRobotoBold font6 line8 letterzero':
           variant === TextVariant.Large && weight === FontWeight.Bold,
         'familyRobotoRegular font6 line8 letterzero':
@@ -45,25 +45,23 @@ const Text = ({
           variant === TextVariant.Small && weight === FontWeight.Regular,
         'familyRobotoMedium letterzero':
           variant === TextVariant.ExtraSmall && weight === FontWeight.Medium,
-        'familyRobotoRegular font3 letterzero':
-          variant === TextVariant.ExtraExtraSmall,
+        'familyRobotoRegular font3 letterzero': variant === TextVariant.ExtraExtraSmall,
         'familyRobotoMedium font3 letterzero':
-          variant === TextVariant.ExtraExtraSmall &&
-          weight === FontWeight.Medium,
+          variant === TextVariant.ExtraExtraSmall && weight === FontWeight.Medium,
         'familyRobotoBold font3 letterzero':
           variant === TextVariant.ExtraExtraSmall && weight === FontWeight.Bold,
         alignLeft: align === TextAlign.Left,
         alignCenter: align === TextAlign.Center,
         alignRight: align === TextAlign.Right,
       }),
-      {color},
-      variant === TextVariant.ExtraLarge ? {fontSize: 26} : {},
-      variant === TextVariant.Medium ? {lineHeight: 26} : {},
-      variant === TextVariant.ExtraSmall ? {fontSize: 14, lineHeight: 18} : {},
+      { color },
+      variant === TextVariant.ExtraLarge ? { fontSize: 26 } : {},
+      variant === TextVariant.Medium ? { lineHeight: 26 } : {},
+      variant === TextVariant.ExtraSmall ? { fontSize: 14, lineHeight: 18 } : {},
     )}>
     {`${children}`}
   </RNText>
-);
+)
 
 export const OnboardingText = ({
   children,
@@ -78,15 +76,14 @@ export const OnboardingText = ({
       style,
       classNames('letterfour', {
         'familyRobotoBold font9 line11': variant === OnboardingTextVariant.Hero,
-        'familyRobotoRegular font7 line9':
-          variant === OnboardingTextVariant.ExtraLarge,
+        'familyRobotoRegular font7 line9': variant === OnboardingTextVariant.ExtraLarge,
         'familyRobotoRegular line7': variant === OnboardingTextVariant.Large,
       }),
-      {color},
-      variant === OnboardingTextVariant.Large ? {fontSize: 21} : {},
+      { color },
+      variant === OnboardingTextVariant.Large ? { fontSize: 21 } : {},
     )}>
     {`${children}`}
   </RNText>
-);
+)
 
-export default Text;
+export default Text

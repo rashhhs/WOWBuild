@@ -1,0 +1,28 @@
+{
+  "root": true,
+  "extends": ["@react-native-community", "plugin:import/errors", "plugin:import/warnings", "plugin:prettier/recommended"],
+  "plugins": ["detox", "prettier"],
+  "rules": {
+    "semi": ["off"],
+    "no-unused-vars": [
+      "warn",
+      { "ignoreRestSiblings": true, "varsIgnorePattern": "_$", "argsIgnorePattern": "^_" }
+    ],
+    "import/order": ["error", { "newlines-between": "always" }],
+    "import/no-unused-modules": ["warn"],
+    "import/no-unresolved": ["off"],
+    "prettier/prettier": ["error"],
+    "react/no-did-update-set-state": ["off"],
+    "no-fallthrough": "off",
+    "eslinteslint-comments/no-unlimited-disable": "off"
+  },
+  "env": {
+    "jest/globals": true
+  },
+  "settings": {
+    "import/ignore": ["node_modules"],
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}

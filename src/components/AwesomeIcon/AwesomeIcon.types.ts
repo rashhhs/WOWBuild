@@ -1,7 +1,8 @@
-import type {IconName, Transform} from '@fortawesome/fontawesome-svg-core';
-import type Color from '../../utils/Colors';
-import type {ViewStyle} from 'react-native';
-import type {WithTestID} from '../../utils/types';
+import type { IconName, Transform } from '@fortawesome/fontawesome-svg-core'
+import type { ViewStyle } from 'react-native'
+
+import type Color from '../../utils/Colors'
+import type { WithTestID } from '../../utils/types'
 
 export enum AwesomeIconVariant {
   Brand = 'fab',
@@ -22,12 +23,12 @@ export enum AwesomeIconSize {
 }
 
 export type AwesomeIconProps = WithTestID<{
-  variant?: AwesomeIconVariant;
-  icon: IconName;
-  color?: Color;
-  size?: AwesomeIconSize;
-  style?: ViewStyle;
-  transform?: Transform;
-}>;
+  variant?: AwesomeIconVariant
+  icon: IconName
+  color?: Color
+  size?: AwesomeIconSize
+  style?: ViewStyle
+  transform?: Transform
+}>
 
-export type {IconName, Transform};
+export type { IconName, Transform }

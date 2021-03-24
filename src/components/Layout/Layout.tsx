@@ -1,19 +1,14 @@
-import {apply, C, classNames} from '../../utils/styles';
-import React, {useEffect} from 'react';
-import {
-  Platform,
-  StatusBar,
-  TouchableOpacity,
-  View,
-  ViewStyle,
-} from 'react-native';
-import KeyboardSpacer from 'react-native-keyboard-spacer';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import Color from '../../utils/Colors';
+import React, { useEffect } from 'react'
+import { Platform, StatusBar, TouchableOpacity, View, ViewStyle } from 'react-native'
+import KeyboardSpacer from 'react-native-keyboard-spacer'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
-import type {LayoutProps} from './Layout.types';
-import AwesomeIcon, {AwesomeIconSize, AwesomeIconVariant} from '../AwesomeIcon';
-import Text, {FontWeight, TextVariant} from '../Text';
+import Color from '../../utils/Colors'
+import { apply, C, classNames } from '../../utils/styles'
+import AwesomeIcon, { AwesomeIconSize, AwesomeIconVariant } from '../AwesomeIcon'
+import Text, { FontWeight, TextVariant } from '../Text'
+
+import type { LayoutProps } from './Layout.types'
 
 const Layout = ({
   actions,
@@ -30,23 +25,19 @@ const Layout = ({
   testID,
 }: LayoutProps) => {
   useEffect(() => {
-    StatusBar.setBarStyle(lightBar ? 'light-content' : 'dark-content');
+    StatusBar.setBarStyle(lightBar ? 'light-content' : 'dark-content')
 
     if (Platform.OS !== 'ios') {
-      StatusBar.setHidden(false);
-      StatusBar.setBackgroundColor(statusBarColor);
+      StatusBar.setHidden(false)
+      StatusBar.setBackgroundColor(statusBarColor)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [statusBarColor]);
+  }, [statusBarColor])
 
   return (
     <>
       <SafeAreaView
-        style={apply(
-          C.bgBackdrop,
-          C.flex,
-          withTabs ? {paddingBottom: -insets.bottom} : {},
-        )}
+        style={apply(C.bgBackdrop, C.flex, withTabs ? { paddingBottom: -insets.bottom } : {})}
         {...testID}>
         {!hideHeader ? (
           <View
@@ -79,19 +70,15 @@ const Layout = ({
               title
             )}
             {actions ? (
-              <View style={apply(C.ml1, C.row, C.justifyEnd, C.itemsCenter)}>
-                {actions}
-              </View>
+              <View style={apply(C.ml1, C.row, C.justifyEnd, C.itemsCenter)}>{actions}</View>
             ) : null}
           </View>
         ) : null}
         {children}
       </SafeAreaView>
-      {!hideKeyboardSpacer && Platform.OS === 'ios' && (
-        <KeyboardSpacer topSpacing={0} />
-      )}
+      {!hideKeyboardSpacer && Platform.OS === 'ios' && <KeyboardSpacer topSpacing={0} />}
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

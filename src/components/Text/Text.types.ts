@@ -1,6 +1,7 @@
-import type {TextProps as RNTextProps} from 'react-native';
-import type {PropsWithTypedChildren, WithTestID} from '../../utils/types';
-import type {TextColor} from '../../utils/Colors';
+import type { TextProps as RNTextProps } from 'react-native'
+
+import type { TextColor } from 'src/utils/Colors'
+import type { PropsWithTypedChildren, WithTestID } from 'src/utils/types'
 
 export enum TextVariant {
   Hero = 'Hero',
@@ -41,10 +42,10 @@ export enum FontWeight {
 }
 
 type FontProps = WithTestID<{
-  align?: TextAlign;
-  color?: TextColor;
-  uppercase?: boolean;
-}>;
+  align?: TextAlign
+  color?: TextColor
+  uppercase?: boolean
+}>
 
 type BasicText = FontProps & {
   variant:
@@ -55,24 +56,24 @@ type BasicText = FontProps & {
     | TextVariant.XS
     | TextVariant.ExtraSmall
     | TextVariant.XXS
-    | TextVariant.ExtraExtraSmall;
-  weight?: FontWeight.Regular;
-};
+    | TextVariant.ExtraExtraSmall
+  weight?: FontWeight.Regular
+}
 
 type ExtraLargeText = FontProps & {
-  variant: TextVariant.ExtraLarge | TextVariant.XL;
-  weight: FontWeight.Regular | FontWeight.Medium;
-};
+  variant: TextVariant.ExtraLarge | TextVariant.XL
+  weight: FontWeight.Regular | FontWeight.Medium
+}
 
 type LargeText = FontProps & {
-  variant: TextVariant.Large | TextVariant.L;
-  weight: FontWeight.Bold | FontWeight.Regular;
-};
+  variant: TextVariant.Large | TextVariant.L
+  weight: FontWeight.Bold | FontWeight.Regular
+}
 
 type SmallText = FontProps & {
-  variant: TextVariant.Small | TextVariant.S;
-  weight: FontWeight.Bold | FontWeight.Medium | FontWeight.Regular;
-};
+  variant: TextVariant.Small | TextVariant.S
+  weight: FontWeight.Bold | FontWeight.Medium | FontWeight.Regular
+}
 
 export type TextProps = PropsWithTypedChildren<
   | (RNTextProps & BasicText)
@@ -80,12 +81,12 @@ export type TextProps = PropsWithTypedChildren<
   | (RNTextProps & LargeText)
   | (RNTextProps & SmallText),
   string
->;
+>
 
 export type OnboardingTextProps = PropsWithTypedChildren<
   RNTextProps &
     FontProps & {
-      variant: OnboardingTextVariant;
+      variant: OnboardingTextVariant
     },
   string
->;
+>

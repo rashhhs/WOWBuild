@@ -1,17 +1,18 @@
-import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {library} from '@fortawesome/fontawesome-svg-core';
-import {fal} from '@fortawesome/pro-light-svg-icons';
-import {fas} from '@fortawesome/pro-solid-svg-icons';
-import {far} from '@fortawesome/pro-regular-svg-icons';
-import {fad} from '@fortawesome/pro-duotone-svg-icons';
-import {fab} from '@fortawesome/free-brands-svg-icons';
-import Color from '../../utils/Colors';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fad } from '@fortawesome/pro-duotone-svg-icons'
+import { fal } from '@fortawesome/pro-light-svg-icons'
+import { far } from '@fortawesome/pro-regular-svg-icons'
+import { fas } from '@fortawesome/pro-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import React from 'react'
 
-library.add(fal, fas, far, fad, fab);
+import Color from '../../utils/Colors'
 
-import {AwesomeIconSize, AwesomeIconVariant} from './AwesomeIcon.types';
-import type {AwesomeIconProps} from './AwesomeIcon.types';
+import { AwesomeIconSize, AwesomeIconVariant } from './AwesomeIcon.types'
+import type { AwesomeIconProps } from './AwesomeIcon.types'
+
+library.add(fal, fas, far, fad, fab)
 
 const AwesomeIcon = ({
   color = Color.squidInk,
@@ -30,6 +31,6 @@ const AwesomeIcon = ({
     transform={transform}
     {...testID}
   />
-);
+)
 
-export default AwesomeIcon;
+export default AwesomeIcon
