@@ -1,0 +1,9 @@
+{
+  "setupFilesAfterEnv": ["./init.ts"],
+  "testEnvironment": "./environment",
+  "testRunner": "jest-circus/runner",
+  "reporters": ["detox/runners/jest/streamlineReporter"],
+  "testTimeout": 300000,
+  "verbose": true,
+  "preset": "ts-jest"
+}

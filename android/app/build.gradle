@@ -78,7 +78,12 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    enableHermes: false,  // clean and rebuild if changing
+        entryFile: "index.js",
+        bundleInQa: true,
+        bundleInStaging: true,
+        devDisabledInQa: true,
+        devDisabledInStaging: true,
+        enableHermes: true,
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -134,6 +139,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     splits {
         abi {
@@ -184,8 +190,9 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    implementation 'androidx.appcompat:appcompat:1.3.0-rc01'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    implementation 'com.android.support:multidex:1.0.3'
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
