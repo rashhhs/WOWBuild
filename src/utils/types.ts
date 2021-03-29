@@ -9,6 +9,8 @@ export type WithTestID<T = {}> = T & { testID?: string }
 
 export type VoidFunction = () => void
 
+export type Timestamp = number
+
 export type RootStackParamList = {
   BuildDetail: { build: Generic }
   BuildFragment: { title: string; fragment: Generic }

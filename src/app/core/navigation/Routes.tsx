@@ -5,13 +5,17 @@ import React from 'react'
 import {
   SCREEN_BUILD_DETAIL,
   SCREEN_BUILD_FRAGMENT,
+  SCREEN_BUILDS,
+  SCREEN_ME,
   STACK_APP,
   STACK_BUILDS,
   STACK_ME,
 } from './ScreenNames'
 
-import BuildDetail from 'src/app/build/BuildDetail'
-import BuildFragment from 'src/app/build/BuildFragment'
+import BuildsProvider from 'src/app/build/contexts/Builds'
+import BuildDetail from 'src/app/build/screens/BuildDetail'
+import BuildFragment from 'src/app/build/screens/BuildFragment'
+import Builds from 'src/app/build/screens/Builds'
 import { tabBarItem } from 'src/app/core/navigation/utils'
 import Color from 'src/utils/Colors'
 import { C, apply } from 'src/utils/styles'
@@ -23,17 +27,23 @@ const options = {
   gestureEnabled: false,
 }
 
-const Me = () => (
-  <Stack.Navigator headerMode="none">
-    <Stack.Screen name={SCREEN_BUILD_DETAIL} component={BuildDetail} />
-  </Stack.Navigator>
+const MeStack = () => (
+  <BuildsProvider>
+    <Stack.Navigator headerMode="none">
+      <Stack.Screen name={SCREEN_ME} component={Builds} />
+      <Stack.Screen name={SCREEN_BUILD_DETAIL} component={BuildDetail} />
+    </Stack.Navigator>
+  </BuildsProvider>
 )
 
-const Builds = () => (
-  <Stack.Navigator headerMode="none">
-    <Stack.Screen name={SCREEN_BUILD_DETAIL} component={BuildDetail} />
-    <Stack.Screen name={SCREEN_BUILD_FRAGMENT} component={BuildFragment} />
-  </Stack.Navigator>
+const BuildsStack = () => (
+  <BuildsProvider>
+    <Stack.Navigator headerMode="none">
+      <Stack.Screen name={SCREEN_BUILDS} component={Builds} />
+      <Stack.Screen name={SCREEN_BUILD_DETAIL} component={BuildDetail} />
+      <Stack.Screen name={SCREEN_BUILD_FRAGMENT} component={BuildFragment} />
+    </Stack.Navigator>
+  </BuildsProvider>
 )
 
 const AppStack = () => {
@@ -47,8 +57,8 @@ const AppStack = () => {
         tabStyle: apply(C.bgPlatin, C.itemsCenter, C.py1, C.h12),
       }}
       screenOptions={{ unmountOnBlur: true }}>
-      <Tab.Screen name={STACK_BUILDS} {...tabBarItem(null, STACK_BUILDS)} component={Builds} />
-      <Tab.Screen name={STACK_ME} {...tabBarItem(null, STACK_ME)} component={Me} />
+      <Tab.Screen name={STACK_BUILDS} {...tabBarItem(null, STACK_BUILDS)} component={BuildsStack} />
+      <Tab.Screen name={STACK_ME} {...tabBarItem(null, STACK_ME)} component={MeStack} />
     </Tab.Navigator>
   )
 }

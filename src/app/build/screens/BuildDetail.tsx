@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { ScrollView, TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -12,11 +13,17 @@ import { apply, C } from 'src/utils/styles'
 
 const BuildDetail = () => {
   const insets = useSafeAreaInsets()
+  const { goBack } = useNavigation()
+
   const { showTabs } = useTabs()
+
+  const onBackPressed = () => {
+    goBack()
+  }
 
   showTabs()
   return (
-    <Layout title={'Name Build'} insets={insets} withTabs>
+    <Layout title={'Name Build'} insets={insets} withTabs withBack onBack={onBackPressed}>
       <ScrollView bounces={false}>
         {/* General Information */}
         <View style={apply(C.flex, C.m2, C.p2, C.bgSquidInk, C.radius2)}>

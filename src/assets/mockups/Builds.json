@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "id": "low001",
+      "name": "Lord of Wyrms",
+      "lastUpdate": 1617005573,
+      "expansion": "sha",
+      "spec": "frost_death_knight"
+    },
+    {
+      "id": "ok001",
+      "name": "Obliterate Knight",
+      "lastUpdate": 1617005573,
+      "expansion": "sha",
+      "spec": "frost_death_knight"
+    },
+    {
+      "id": "ipof001",
+      "name": "Infinite Pillar of Frost",
+      "lastUpdate": 1617005573,
+      "expansion": "sha",
+      "spec": "frost_death_knight"
+    },
+    {
+      "id": "fs001",
+      "name": "Frost Storm",
+      "lastUpdate": 1617005573,
+      "expansion": "sha",
+      "spec": "frost_death_knight"
+    }
+  ]
+}
