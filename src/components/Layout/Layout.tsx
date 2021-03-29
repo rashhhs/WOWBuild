@@ -3,12 +3,12 @@ import { Platform, StatusBar, TouchableOpacity, View, ViewStyle } from 'react-na
 import KeyboardSpacer from 'react-native-keyboard-spacer'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-import Color from '../../utils/Colors'
-import { apply, C, classNames } from '../../utils/styles'
-import AwesomeIcon, { AwesomeIconSize, AwesomeIconVariant } from '../AwesomeIcon'
-import Text, { FontWeight, TextVariant } from '../Text'
-
 import type { LayoutProps } from './Layout.types'
+
+import AwesomeIcon, { AwesomeIconSize, AwesomeIconVariant } from 'src/components/AwesomeIcon'
+import Text, { FontWeight, TextVariant } from 'src/components/Text'
+import Color from 'src/utils/Colors'
+import { apply, C, classNames } from 'src/utils/styles'
 
 const Layout = ({
   actions,

@@ -1,9 +1,6 @@
 import React from 'react'
 import { Text as RNText } from 'react-native'
 
-import { TextColor } from '../../utils/Colors'
-import { apply, classNames } from '../../utils/styles'
-
 import {
   FontWeight,
   OnboardingTextProps,
@@ -11,7 +8,9 @@ import {
   TextAlign,
   TextProps,
   TextVariant,
-} from './Text.types'
+} from 'src/components/Text/Text.types'
+import { TextColor } from 'src/utils/Colors'
+import { apply, classNames } from 'src/utils/styles'
 
 const Text = ({
   align,
@@ -26,7 +25,7 @@ const Text = ({
     {...props}
     style={apply(
       style,
-      classNames('', {
+      classNames({
         'familyRobotoMedium font8 line9 letterfour': variant === TextVariant.Hero,
         'familyRobotoMedium line8 lettertwo': variant === TextVariant.ExtraLarge,
         'familyRobotoBold font6 line8 letterzero':

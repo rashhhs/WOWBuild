@@ -5,7 +5,7 @@
   "printWidth": 100,
   "trailingComma": "all",
   "jsxBracketSameLine": true,
-  "importOrder": ["^/(.*)$", "^(\\..)/(.*)$", "^(\\.)/(.*)$"],
+  "importOrder": ["^/(.*)$", "^(\\..)/(.*)$", "^(\\.)/(.*)$", "^(src)/(.*)$"],
   "importOrderSeparation": true,
   "arrowParens": "avoid"
 }

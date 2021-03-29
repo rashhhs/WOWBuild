@@ -2,12 +2,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
 
-import Color from '../../../utils/Colors'
-import { C, apply } from '../../../utils/styles'
-import BuildDetail from '../../build/BuildDetail'
+import {
+  SCREEN_BUILD_DETAIL,
+  SCREEN_BUILD_FRAGMENT,
+  STACK_APP,
+  STACK_BUILDS,
+  STACK_ME,
+} from './ScreenNames'
 
-import { SCREEN_BUILD_DETAIL, STACK_APP, STACK_BUILDS, STACK_ME } from './ScreenNames'
-import { tabBarItem } from './utils'
+import BuildDetail from 'src/app/build/BuildDetail'
+import BuildFragment from 'src/app/build/BuildFragment'
+import { tabBarItem } from 'src/app/core/navigation/utils'
+import Color from 'src/utils/Colors'
+import { C, apply } from 'src/utils/styles'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -25,6 +32,7 @@ const Me = () => (
 const Builds = () => (
   <Stack.Navigator headerMode="none">
     <Stack.Screen name={SCREEN_BUILD_DETAIL} component={BuildDetail} />
+    <Stack.Screen name={SCREEN_BUILD_FRAGMENT} component={BuildFragment} />
   </Stack.Navigator>
 )
 
