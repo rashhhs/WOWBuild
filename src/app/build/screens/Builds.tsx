@@ -1,5 +1,6 @@
 import React from 'react'
 import { FlatList, TouchableOpacity, View } from 'react-native'
+import FastImage, { ImageStyle } from 'react-native-fast-image'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 import { useBuilds } from 'src/app/build/hooks/Builds'
@@ -9,6 +10,7 @@ import AwesomeIcon, { AwesomeIconSize, AwesomeIconVariant } from 'src/components
 import Layout from 'src/components/Layout'
 import Text, { FontWeight, TextVariant } from 'src/components/Text'
 import Color, { TextColor } from 'src/utils/Colors'
+import { dateToString } from 'src/utils/dates'
 import { apply, C } from 'src/utils/styles'
 
 const Builds = () => {
@@ -34,18 +36,31 @@ const Builds = () => {
                 C.mbDouble,
               )}
               onPress={() => navigate(SCREEN_BUILD_DETAIL)}>
-              <View>
-                <Text variant={TextVariant.XXS} color={TextColor.neutral}>
-                  {item.lastUpdate.toString()}
-                </Text>
-                <Text variant={TextVariant.S} weight={FontWeight.Medium} numberOfLines={1}>
-                  {item.name}
-                </Text>
+              <View style={apply(C.row, C.itemsCenter)}>
+                <FastImage
+                  style={apply(C.w6, C.h6, C.mr2) as ImageStyle}
+                  source={{
+                    uri: item.specImage,
+                  }}
+                  resizeMode={FastImage.resizeMode.contain}
+                />
+                <View>
+                  <Text variant={TextVariant.XXS} color={TextColor.neutral}>
+                    {dateToString(item.lastUpdate)}
+                  </Text>
+                  <Text variant={TextVariant.S} weight={FontWeight.Medium} numberOfLines={1}>
+                    {item.name}
+                  </Text>
+                </View>
               </View>
               <View style={apply(C.row, C.itemsCenter)}>
-                <Text variant={TextVariant.S} weight={FontWeight.Regular} style={C.mr4}>
-                  {item.expansion}
-                </Text>
+                <FastImage
+                  style={apply(C.w20, C.h10, C.mr4) as ImageStyle}
+                  source={{
+                    uri: item.expansionImage,
+                  }}
+                  resizeMode={FastImage.resizeMode.contain}
+                />
                 <AwesomeIcon
                   variant={AwesomeIconVariant.Solid}
                   icon={'chevron-right'}

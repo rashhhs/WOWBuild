@@ -1,10 +1,12 @@
+import type { IconName } from '@fortawesome/fontawesome-svg-core'
 import { useFocusEffect, useNavigation } from '@react-navigation/native'
 import React, { useCallback } from 'react'
 
 import NavigationService from './NavigationService'
 
+import AwesomeIcon from 'src/components/AwesomeIcon'
 import Text, { TextVariant } from 'src/components/Text'
-import { TextColor } from 'src/utils/Colors'
+import Color, { TextColor } from 'src/utils/Colors'
 import { C } from 'src/utils/styles'
 
 export const useTabs = () => {
@@ -44,8 +46,7 @@ export function navigate(screen: string, props?: any, action?: any) {
   NavigationService.navigate(screen, props, action)
 }
 
-//TODO (R): Add TabBarIcon
-export const tabBarItem = (Icon: any, name: string) => ({
+export const tabBarItem = (icon: IconName, name: string) => ({
   options: {
     unmountOnBlur: true,
     gestureEnabled: false,
@@ -56,6 +57,9 @@ export const tabBarItem = (Icon: any, name: string) => ({
         variant={TextVariant.ExtraExtraSmall}>
         {name}
       </Text>
+    ),
+    tabBarIcon: ({ color }: { color: string }) => (
+      <AwesomeIcon icon={icon} size={16} color={color as Color} />
     ),
   },
 })

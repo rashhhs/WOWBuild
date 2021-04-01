@@ -32,6 +32,7 @@ const MeStack = () => (
     <Stack.Navigator headerMode="none">
       <Stack.Screen name={SCREEN_ME} component={Builds} />
       <Stack.Screen name={SCREEN_BUILD_DETAIL} component={BuildDetail} />
+      <Stack.Screen name={SCREEN_BUILD_FRAGMENT} component={BuildFragment} />
     </Stack.Navigator>
   </BuildsProvider>
 )
@@ -57,8 +58,12 @@ const AppStack = () => {
         tabStyle: apply(C.bgPlatin, C.itemsCenter, C.py1, C.h12),
       }}
       screenOptions={{ unmountOnBlur: true }}>
-      <Tab.Screen name={STACK_BUILDS} {...tabBarItem(null, STACK_BUILDS)} component={BuildsStack} />
-      <Tab.Screen name={STACK_ME} {...tabBarItem(null, STACK_ME)} component={MeStack} />
+      <Tab.Screen
+        name={STACK_BUILDS}
+        {...tabBarItem('book', STACK_BUILDS)}
+        component={BuildsStack}
+      />
+      <Tab.Screen name={STACK_ME} {...tabBarItem('user', STACK_ME)} component={MeStack} />
     </Tab.Navigator>
   )
 }

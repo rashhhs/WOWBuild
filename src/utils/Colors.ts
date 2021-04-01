@@ -52,12 +52,11 @@ export enum ButtonColor {
   disrupt = '#fd454d',
 }
 
-export const Gradient: {single: string[]} = {
+export const Gradient: { single: string[] } = {
   single: ['#1E93F4', '#4181F2'],
-};
+}
 
-export const withAlpha = (color: Color, alpha: number) =>
-  `${color}${convertTable[alpha] ?? 'FF'}`;
+export const withAlpha = (color: Color, alpha: number) => `${color}${convertTable[alpha] ?? 'FF'}`
 
 const convertTable: string[] = [
   '00',
@@ -161,6 +160,6 @@ const convertTable: string[] = [
   'FA',
   'FC',
   'FF',
-];
+]
 
-export default Color;
+export default Color

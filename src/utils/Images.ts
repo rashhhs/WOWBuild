@@ -1,0 +1,52 @@
+export const BASE_IMAGE_URL = 'https://wow.zamimg.com/images/'
+export const LARGE_ICONS_URL = 'wow/icons/large/'
+export const EXPANSION_FLAGS_URL = 'icons/expansions/'
+
+export enum SpecialitzationIcons {
+  Affliction = 'spell_shadow_deathcoil.jpg',
+  Arcane = 'spell_holy_magicalsentry.jpg',
+  Arms = 'ability_warrior_savageblow.jpg',
+  Assassination = 'ability_rogue_deadlybrew.jpg',
+  Balance = 'spell_nature_starfall.jpg',
+  BeastMastery = 'ability_hunter_bestialdiscipline.jpg',
+  Blood = 'spell_deathknight_bloodpresence.jpg',
+  Brewmaster = 'spell_monk_brewmaster_spec.jpg',
+  Demonology = '',
+  Destruction = 'spell_shadow_rainoffire.jpg',
+  Discipline = 'spell_holy_powerwordshield.jpg',
+  Elemental = 'spell_nature_lightning.jpg',
+  Enhancement = 'spell_shaman_improvedstormstrike.jpg',
+  Feral = 'talentspec_druid_feral_cat.jpg',
+  Fire = 'spell_fire_flamebolt.jpg',
+  FrostDeathKnight = 'spell_deathknight_frostpresence.jpg',
+  FrostMage = 'spell_frost_frostbolt02.jpg',
+  Fury = 'ability_warrior_innerrage.jpg',
+  Guardian = 'talentspec_druid_feral_bear.jpg',
+  Havoc = 'ability_demonhunter_specdps.jpg',
+  HolyPaladin = 'spell_holy_holybolt.jpg',
+  HolyPriest = 'spell_holy_guardianspirit.jpg',
+  Markmanship = 'ability_hunter_focusedaim.jpg',
+  Mistweaver = 'spell_monk_mistweaver_spec.jpg',
+  Outlaw = 'ability_rogue_waylay.jpg',
+  ProtectionPaladin = 'ability_paladin_shieldofthetemplar.jpg',
+  ProtectionWarrior = 'ability_warrior_defensivestance.jpg',
+  RestorationDruida = 'spell_nature_healingtouch.jpg',
+  RestorationShaman = 'spell_nature_healingwavegreater.jpg',
+  Retribution = 'paladin_retribution.jpg',
+  Shadow = 'spell_shadow_shadowwordpain.jpg',
+  Subtlety = 'ability_stealth.jpg',
+  Survival = '',
+  Vengeance = 'ability_demonhunter_spectank.jpg',
+  Windwalker = 'spell_monk_windwalker_spec.jpg',
+}
+
+export enum ExpansionIcon {
+  BurningCrusade = 'bc.gif',
+  WrathOfTheLichKing = 'wotlk.gif',
+  Cataclysm = 'cata.gif',
+  MistOfPandaria = 'mop.png',
+  WarlordsOfDraenor = 'warlords.png',
+  Legion = 'legion.png',
+  BattleForAzeroth = 'bfa-2x.png',
+  Shadowlands = 'shadowlands.png',
+}
