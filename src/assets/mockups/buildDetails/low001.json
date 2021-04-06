@@ -1,0 +1,77 @@
+{
+  "name": "Lord of Wyrms",
+  "spec": "fros",
+  "profile": {
+    "name": "Gruhgmor",
+    "race": "Orc",
+    "reign": "Stormscale (EU)",
+    "secondaryStats": {
+      "order": ["mastery", "critic", "versatility", "haste"],
+      "mastery": "> 40 ",
+      "haste": null,
+      "versatility": null,
+      "critic": "20 - 30"
+    }
+  },
+  "classSpecifics": [
+    {
+      "type": "weapon",
+      "value": ["dual-wield"]
+    },
+    {
+      "type": "runeforge",
+      "value": ["rune-of-razorice", "rune-of-the-fallen-crusader"]
+    }
+  ],
+  "mechanics":{
+    "values": ["murderous-efficiency", "cold-heart", "killing-machine"],
+    "extra": [
+      {
+        "title": "",
+        "content": ""
+      },
+      {
+        "title": "",
+        "content": ""
+      }
+    ]
+  },
+  "skills":{
+    "values": ["breath-of-sindragosa", "pillar-of-frost", "empower-rune-weapon", "hypothermic-presence", "obliterate", "frostwyrms-fury"],
+    "extra": [
+      {
+        "title": "",
+        "content": ""
+      },
+      {
+        "title": "",
+        "content": ""
+      }
+    ]
+  },
+  "talents":{
+    "values": ["cold-heart", "murderous-efficiency", "asphyxiate", "avalanche", "permafrost", "hypothermic-presence", "breath-of-sindragosa"],
+    "pvp": [""],
+    "extra": [
+      {
+        "title": "",
+        "content": ""
+      },
+      {
+        "title": "",
+        "content": ""
+      }
+    ]
+  },
+  "covenantLegendary": {
+    "covenant": {
+      "utility": "",
+      "class": ""
+    },
+    "legendary": ""
+  },
+  "soulbinds": {
+    "who": "",
+    "values": ["", "", "", "", "", ""]
+  }
+}

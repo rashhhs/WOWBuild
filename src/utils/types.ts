@@ -12,6 +12,6 @@ export type VoidFunction = () => void
 export type Timestamp = number
 
 export type RootStackParamList = {
-  BuildDetail: { build: Generic }
+  BuildDetail: { id: string }
   BuildFragment: { title: string; fragment: Generic }
 }

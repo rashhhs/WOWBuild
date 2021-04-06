@@ -12,13 +12,14 @@ import Text, { FontWeight, TextVariant } from 'src/components/Text'
 import Color, { TextColor } from 'src/utils/Colors'
 import { dateToString } from 'src/utils/dates'
 import { apply, C } from 'src/utils/styles'
+import translate from 'src/utils/translate'
 
 const Builds = () => {
   const insets = useSafeAreaInsets()
   const builds = useBuilds()
 
   return (
-    <Layout insets={insets} title={'Builds'} withTabs>
+    <Layout insets={insets} title={translate('builds.title')} withTabs>
       <FlatList
         data={builds}
         keyExtractor={({ id }) => id}
@@ -35,7 +36,9 @@ const Builds = () => {
                 C.px4,
                 C.mbDouble,
               )}
-              onPress={() => navigate(SCREEN_BUILD_DETAIL)}>
+              onPress={() => {
+                navigate(SCREEN_BUILD_DETAIL, { id: item.id })
+              }}>
               <View style={apply(C.row, C.itemsCenter)}>
                 <FastImage
                   style={apply(C.w6, C.h6, C.mr2) as ImageStyle}

@@ -1,3 +1,23 @@
 {
+  "builds": {
+    "title": "Builds"
+  },
+  "buildDetail": {
+    "characterName": "Nombre",
+    "secondaries": {
+      "orders": "Estadísticas secundarias: ",
+      "critic": "Crítico",
+      "haste": "Celeridad",
+      "mastery": "Maestria",
+      "versatility": "Versatilidad"
+    },
+    "race": "",
+    "reign": "",
+    "classSpecifics": "Específicos de classe",
+    "skills": "Habilidades",
+    "mechanics": "Mecánicas",
+    "talents": "Talentos",
+    "covenantLegendary": "Cúria & Legendario"
 
+  }
 }

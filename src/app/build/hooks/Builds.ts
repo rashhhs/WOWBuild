@@ -9,3 +9,15 @@ export const useBuilds = () => {
 
   return builds
 }
+
+export const useBuildDetail = () => {
+  const { build } = useBuild()
+
+  return build
+}
+
+export const useBuildActions = () => {
+  const { fetchBuildDetail, clearBuildDetail } = useBuild()
+
+  return { fetchBuildDetail, clearBuildDetail }
+}
