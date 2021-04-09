@@ -209,9 +209,23 @@ export const mapBuildDetail = (id: string, data: BackendBuildDetail): BuildDetai
 //TODO (R): Finish with other classes
 export const mapClassSpecifics = (data: BackendClassSpecificBuild[]): ClassSpecificBuild[] => {
   return data.map(b => {
+    let value
+
+    switch (b.type) {
+      case ClassSpecifics.Weapon:
+        value = b.value as Weapon[]
+        break
+      case ClassSpecifics.Runeforge:
+        value = b.value as Runeforging[]
+        break
+      default:
+        value = b.value as Weapon[]
+        break
+    }
+
     return {
       type: b.type as ClassSpecifics,
-      value: Array.isArray(b.value) ? (b.value as Runeforging[]) : (b.value as Weapon),
+      value: value,
     }
   })
 }
