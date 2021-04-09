@@ -1,0 +1,77 @@
+{
+  "name": "",
+  "spec": "fros",
+  "profile": {
+    "name": "",
+    "race": "",
+    "reign": "",
+    "secondaryStats": {
+      "order": ["", "", "", ""],
+      "mastery": null,
+      "haste": null,
+      "versatility": null,
+      "critic": null
+    }
+  },
+  "classSpecifics": [
+    {
+      "type": "weapon",
+      "value": ["dual-wield"]
+    },
+    {
+      "type": "runeforge",
+      "value": ["", ""]
+    }
+  ],
+  "mechanics":{
+    "values": ["", "", ""],
+    "extra": [
+      {
+        "title": "",
+        "content": ""
+      },
+      {
+        "title": "",
+        "content": ""
+      }
+    ]
+  },
+  "skills":{
+    "values": ["", "", ""],
+    "extra": [
+      {
+        "title": "",
+        "content": ""
+      },
+      {
+        "title": "",
+        "content": ""
+      }
+    ]
+  },
+  "talents":{
+    "values": ["", "", ""],
+    "pvp": [""],
+    "extra": [
+      {
+        "title": "",
+        "content": ""
+      },
+      {
+        "title": "",
+        "content": ""
+      }
+    ]
+  },
+  "covenantLegendary": {
+    "covenant": {
+      "utility": "",
+      "class": ""
+    },
+    "legendary": ""
+  },
+  "soulbinds": {
+    "who": "",
+    "values": ["", "", "", "", "", ""]
+  }
+}

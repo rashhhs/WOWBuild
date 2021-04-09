@@ -1,6 +1,24 @@
-import { BackendBuild, Build } from './types'
+import {
+  BackendBuild,
+  BackendBuildDetail,
+  BackendClassSpecificBuild,
+  Build,
+  BuildDetail,
+  ClassSpecificBuild,
+  Covenant,
+  CovenantLegendary,
+  Skill,
+  SkillPvp,
+} from './types'
 
-import { Expansion, Specialitzation } from 'src/app/core/config/types'
+import {
+  Ability as FrostAbility,
+  Talent as FrostTalent,
+  PvpTalent as FrostPvpTalent,
+} from 'src/app/core/config/classes/deathKnight/frost/types'
+import { Runeforging } from 'src/app/core/config/classes/deathKnight/types'
+import { ClassSpecifics, Specialitzation } from 'src/app/core/config/classes/types'
+import { Expansion, Weapon } from 'src/app/core/config/types'
 import {
   SpecialitzationIcons,
   LARGE_ICONS_URL,
@@ -8,6 +26,8 @@ import {
   BASE_IMAGE_URL,
   EXPANSION_FLAGS_URL,
 } from 'src/utils/Images'
+import { inEnum } from 'src/utils/enum'
+import { Generic } from 'src/utils/types'
 
 const getSpecIcon = (build: BackendBuild): string => {
   //TODO (R) Add Placeholder
@@ -162,3 +182,61 @@ export const mapBuilds = (data: BackendBuild[]): Build[] => {
     }
   })
 }
+
+export const mapBuildDetail = (id: string, data: BackendBuildDetail): BuildDetail => {
+  return {
+    ...data,
+    id: id,
+    classSpecifics: mapClassSpecifics(data.classSpecifics),
+    mechanics: {
+      ...data.mechanics,
+      values: mapSkill(data.mechanics.values),
+    },
+    skills: {
+      ...data.skills,
+      values: mapSkill(data.skills.values),
+    },
+    talents: {
+      ...data.talents,
+      values: mapSkill(data.talents.values),
+      pvp: mapPvpTalent(data.talents.pvp),
+    },
+    covenantLegendary: mapCovenantLegendary(data.covenantLegendary),
+  }
+}
+
+//TODO (R): Take a look on the value property when the solution will be more complex, because maybe cannot be handle
+//TODO (R): Finish with other classes
+export const mapClassSpecifics = (data: BackendClassSpecificBuild[]): ClassSpecificBuild[] => {
+  return data.map(b => {
+    return {
+      type: b.type as ClassSpecifics,
+      value: Array.isArray(b.value) ? (b.value as Runeforging[]) : (b.value as Weapon),
+    }
+  })
+}
+
+//TODO (R): Finish with other classes
+export const mapSkill = (values: string[]): Skill[] => {
+  if (isFrostAbility(values) || isFrostTalent(values)) {
+    return values as Skill[]
+  }
+
+  return []
+}
+
+//TODO (R): Finish with other classes
+export const mapPvpTalent = (values: string[]): SkillPvp[] => {
+  return isFrostPvpTalent(values) ? (values as SkillPvp[]) : []
+}
+
+//TODO (R): Finish with real types for legendaries & covenants not strings
+export const mapCovenantLegendary = (value: CovenantLegendary): CovenantLegendary => {
+  return value
+}
+
+const isFrostTalent = (values: string[]) => inEnum(FrostTalent, values[0])
+
+const isFrostAbility = (values: string[]) => inEnum(FrostAbility, values[0])
+
+const isFrostPvpTalent = (values: string[]) => inEnum(FrostPvpTalent, values[0])

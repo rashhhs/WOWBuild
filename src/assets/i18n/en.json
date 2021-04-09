@@ -1,3 +1,22 @@
 {
-
+  "builds": {
+    "title": "Builds"
+  },
+  "buildDetail": {
+    "characterName": "Character Name",
+    "secondaries": {
+      "orders": "Secondaries order: ",
+      "critic": "Critic",
+      "haste": "Haste",
+      "mastery": "Mastery",
+      "versatility": "Versatility"
+    },
+    "race": "",
+    "reign": "",
+    "classSpecifics": "Class specifics",
+    "skills": "Skills",
+    "mechanics": "Mechanics",
+    "talents": "Talents",
+    "covenantLegendary": "Covenant & Legendary"
+  }
 }
