@@ -2,13 +2,16 @@ import {
   BackendBuild,
   BackendBuildDetail,
   BackendClassSpecificBuild,
+  BackendConvenantLegendary,
+  BackendSoulbinds,
   Build,
   BuildDetail,
   ClassSpecificBuild,
-  Covenant,
+  Conduit,
   CovenantLegendary,
   Skill,
   SkillPvp,
+  Soulbinds,
 } from './types'
 
 import {
@@ -17,7 +20,12 @@ import {
   PvpTalent as FrostPvpTalent,
 } from 'src/app/core/config/classes/deathKnight/frost/types'
 import { Runeforging } from 'src/app/core/config/classes/deathKnight/types'
-import { ClassSpecifics, Specialitzation } from 'src/app/core/config/classes/types'
+import {
+  ClassSpecifics,
+  Covenant,
+  Legendary,
+  Specialization,
+} from 'src/app/core/config/classes/types'
 import { Expansion, Weapon } from 'src/app/core/config/types'
 import {
   SpecialitzationIcons,
@@ -27,115 +35,114 @@ import {
   EXPANSION_FLAGS_URL,
 } from 'src/utils/Images'
 import { inEnum } from 'src/utils/enum'
-import { Generic } from 'src/utils/types'
 
 const getSpecIcon = (build: BackendBuild): string => {
   //TODO (R) Add Placeholder
   let imageName = ''
   switch (build.spec) {
-    case Specialitzation.Affliction:
+    case Specialization.Affliction:
       imageName = SpecialitzationIcons.Affliction
       break
-    case Specialitzation.Arcane:
+    case Specialization.Arcane:
       imageName = SpecialitzationIcons.Arcane
       break
-    case Specialitzation.Arms:
+    case Specialization.Arms:
       imageName = SpecialitzationIcons.Arms
       break
-    case Specialitzation.Assassination:
+    case Specialization.Assassination:
       imageName = SpecialitzationIcons.Assassination
       break
-    case Specialitzation.Balance:
+    case Specialization.Balance:
       imageName = SpecialitzationIcons.Balance
       break
-    case Specialitzation.BeastMastery:
+    case Specialization.BeastMastery:
       imageName = SpecialitzationIcons.BeastMastery
       break
-    case Specialitzation.Blood:
+    case Specialization.Blood:
       imageName = SpecialitzationIcons.Blood
       break
-    case Specialitzation.Brewmaster:
+    case Specialization.Brewmaster:
       imageName = SpecialitzationIcons.Brewmaster
       break
-    case Specialitzation.Demonology:
+    case Specialization.Demonology:
       //TODO (R): Find the icon
       imageName = SpecialitzationIcons.Demonology
       break
-    case Specialitzation.Destruction:
+    case Specialization.Destruction:
       imageName = SpecialitzationIcons.Destruction
       break
-    case Specialitzation.Discipline:
+    case Specialization.Discipline:
       imageName = SpecialitzationIcons.Discipline
       break
-    case Specialitzation.Elemental:
+    case Specialization.Elemental:
       imageName = SpecialitzationIcons.Elemental
       break
-    case Specialitzation.Enhancement:
+    case Specialization.Enhancement:
       imageName = SpecialitzationIcons.Enhancement
       break
-    case Specialitzation.Feral:
+    case Specialization.Feral:
       imageName = SpecialitzationIcons.Feral
       break
-    case Specialitzation.Fire:
+    case Specialization.Fire:
       imageName = SpecialitzationIcons.Fire
       break
-    case Specialitzation.FrostDeathKnight:
+    case Specialization.FrostDeathKnight:
       imageName = SpecialitzationIcons.FrostDeathKnight
       break
-    case Specialitzation.FrostMage:
+    case Specialization.FrostMage:
       imageName = SpecialitzationIcons.FrostMage
       break
-    case Specialitzation.Fury:
+    case Specialization.Fury:
       imageName = SpecialitzationIcons.Fury
       break
-    case Specialitzation.Guardian:
+    case Specialization.Guardian:
       imageName = SpecialitzationIcons.Guardian
       break
-    case Specialitzation.Havoc:
+    case Specialization.Havoc:
       imageName = SpecialitzationIcons.Havoc
       break
-    case Specialitzation.HolyPaladin:
+    case Specialization.HolyPaladin:
       imageName = SpecialitzationIcons.HolyPaladin
       break
-    case Specialitzation.HolyPriest:
+    case Specialization.HolyPriest:
       imageName = SpecialitzationIcons.HolyPriest
       break
-    case Specialitzation.Marksmanship:
+    case Specialization.Marksmanship:
       imageName = SpecialitzationIcons.Markmanship
       break
-    case Specialitzation.Mistweaver:
+    case Specialization.Mistweaver:
       imageName = SpecialitzationIcons.Mistweaver
       break
-    case Specialitzation.Outlaw:
+    case Specialization.Outlaw:
       imageName = SpecialitzationIcons.Outlaw
       break
-    case Specialitzation.ProtectionPaladin:
+    case Specialization.ProtectionPaladin:
       imageName = SpecialitzationIcons.ProtectionPaladin
       break
-    case Specialitzation.ProtectionWarrior:
+    case Specialization.ProtectionWarrior:
       imageName = SpecialitzationIcons.ProtectionWarrior
       break
-    case Specialitzation.RestorationDruid:
+    case Specialization.RestorationDruid:
       imageName = SpecialitzationIcons.RestorationDruida
       break
-    case Specialitzation.RestorationShaman:
+    case Specialization.RestorationShaman:
       imageName = SpecialitzationIcons.RestorationShaman
       break
-    case Specialitzation.Retribution:
+    case Specialization.Retribution:
       imageName = SpecialitzationIcons.Retribution
       break
-    case Specialitzation.Shadow:
+    case Specialization.Shadow:
       imageName = SpecialitzationIcons.Shadow
       break
-    case Specialitzation.Subtlety:
+    case Specialization.Subtlety:
       imageName = SpecialitzationIcons.Subtlety
       break
-    case Specialitzation.Survival:
+    case Specialization.Survival:
     //TODO (R): Find the icon
-    case Specialitzation.Vengeance:
+    case Specialization.Vengeance:
       imageName = SpecialitzationIcons.Vengeance
       break
-    case Specialitzation.Windwalker:
+    case Specialization.Windwalker:
       imageName = SpecialitzationIcons.Windwalker
       break
   }
@@ -202,6 +209,7 @@ export const mapBuildDetail = (id: string, data: BackendBuildDetail): BuildDetai
       pvp: mapPvpTalent(data.talents.pvp),
     },
     covenantLegendary: mapCovenantLegendary(data.covenantLegendary),
+    soulbinds: mapSoulbinds(data.soulbinds),
   }
 }
 
@@ -244,9 +252,21 @@ export const mapPvpTalent = (values: string[]): SkillPvp[] => {
   return isFrostPvpTalent(values) ? (values as SkillPvp[]) : []
 }
 
-//TODO (R): Finish with real types for legendaries & covenants not strings
-export const mapCovenantLegendary = (value: CovenantLegendary): CovenantLegendary => {
-  return value
+export const mapCovenantLegendary = (value: BackendConvenantLegendary): CovenantLegendary => {
+  return {
+    covenant: {
+      utility: value.covenant.utility as Covenant,
+      class: value.covenant.class as Covenant,
+    },
+    legendary: value.legendary as Legendary,
+  }
+}
+
+export const mapSoulbinds = (values: BackendSoulbinds): Soulbinds => {
+  return {
+    ...values,
+    values: values.values as Conduit[],
+  }
 }
 
 const isFrostTalent = (values: string[]) => inEnum(FrostTalent, values[0])

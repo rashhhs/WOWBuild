@@ -2,10 +2,20 @@ import {
   Ability as FrostAbility,
   PvpTalent as FrostPvpTalent,
   Talent as FrostTalent,
+  Conduit as FrostConduit,
 } from '../core/config/classes/deathKnight/frost/types'
 
-import { Runeforging } from 'src/app/core/config/classes/deathKnight/types'
-import { ClassSpecifics } from 'src/app/core/config/classes/types'
+import {
+  Runeforging,
+  FinesseConduit as FinesseDKConduit,
+  EnduranceConduit as EnduranceDKConduit,
+} from 'src/app/core/config/classes/deathKnight/types'
+import {
+  ClassSpecifics,
+  Conduit as GeneralConduit,
+  Covenant as ClassCovenants,
+  Legendary,
+} from 'src/app/core/config/classes/types'
 import { Weapon } from 'src/app/core/config/types'
 import { Timestamp } from 'src/utils/types'
 
@@ -35,8 +45,8 @@ export type BackendBuildDetail = {
   mechanics: BackendMechanics
   skills: BackendSkills
   talents: BackendTalents
-  covenantLegendary: CovenantLegendary
-  soulbinds: Soulbinds
+  covenantLegendary: BackendConvenantLegendary
+  soulbinds: BackendSoulbinds
 }
 
 export type BuildDetail = {
@@ -108,22 +118,35 @@ export type ExtraContent = {
   content: string
 }
 
-//TODO (R): Type Legendaries with powers etc..
-export type CovenantLegendary = {
-  covenant: Covenant
+export type BackendConvenantLegendary = {
+  covenant: {
+    utility: string
+    class: string
+  }
   legendary: string
 }
 
-export type Covenant = {
-  utility: string
-  class: string
+export type CovenantLegendary = {
+  covenant: Covenant
+  legendary: Legendary
 }
 
-//TODO (R): Type Soulbinds
-export type Soulbinds = {
+export type Covenant = {
+  utility: ClassCovenants
+  class: ClassCovenants
+}
+
+export type BackendSoulbinds = {
   who: string
   values: string[]
 }
+
+export type Soulbinds = {
+  who: string
+  values: Conduit[]
+}
+
+export type Conduit = GeneralConduit | FinesseDKConduit | EnduranceDKConduit | FrostConduit
 
 export type BuildsContextProps = {
   builds: Build[] | null

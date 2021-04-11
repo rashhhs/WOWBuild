@@ -8,3 +8,16 @@ export enum Runeforging {
   StoneskinGargoyle = 'rune-of-the-stoneskin-gargoyle',
   UnendingThirst = 'rune-of-unending-thirst',
 }
+
+export enum EnduranceConduit {
+  InsatiableAppetite = 'insatiable-appetite',
+  HardenedBones = 'hardened-bones',
+  ReinforcedShell = 'reinforced-shell',
+}
+
+export enum FinesseConduit {
+  ChilledResilence = 'chilled-resilience',
+  FleetingWind = 'fleeting-wind',
+  SpiritDrain = 'spirit-drain',
+  UnendingGrip = 'unending-grip',
+}
