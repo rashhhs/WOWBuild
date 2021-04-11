@@ -1,14 +1,14 @@
 {
-  "name": "",
+  "name": "Frost Storm",
   "spec": "fros",
   "profile": {
-    "name": "",
-    "race": "",
-    "reign": "",
+    "name": "Joshuaas",
+    "race": "human",
+    "reign": "Outland (EU)",
     "secondaryStats": {
-      "order": ["", "", "", ""],
+      "order": ["mastery", "haste", "versatility", "critic"],
       "mastery": null,
-      "haste": null,
+      "haste": "15 - 25",
       "versatility": null,
       "critic": null
     }
@@ -20,11 +20,11 @@
     },
     {
       "type": "runeforge",
-      "value": ["", ""]
+      "value": ["rune-of-razorice", "rune-of-the-fallen-crusader"]
     }
   ],
   "mechanics":{
-    "values": ["", "", ""],
+    "values": ["gathering-storm", "everfrost", "runic-empowerment", "cold-heart", "avalanche"],
     "extra": [
       {
         "title": "",
@@ -37,7 +37,7 @@
     ]
   },
   "skills":{
-    "values": ["", "", ""],
+    "values": ["remorseless-winter", "breath-of-sindragosa", "horn-of-winter", "shackle-the-unworthy"],
     "extra": [
       {
         "title": "",
@@ -50,7 +50,7 @@
     ]
   },
   "talents":{
-    "values": ["", "", ""],
+    "values": ["cold-heart", "horn-of-winter", "asphyxiate", "avalanche", "permafrost", "gathering-storm", "breath-of-sindragosa"],
     "pvp": [""],
     "extra": [
       {
@@ -65,13 +65,13 @@
   },
   "covenantLegendary": {
     "covenant": {
-      "utility": "",
-      "class": ""
+      "utility": "summon-steward",
+      "class": "shackle-the-unworthy"
     },
     "legendary": ""
   },
   "soulbinds": {
     "who": "",
-    "values": ["", "", "", "", "", ""]
+    "values": ["combat-meditation", "everfrost"]
   }
 }

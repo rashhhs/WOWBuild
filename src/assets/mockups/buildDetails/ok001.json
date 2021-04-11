@@ -1,30 +1,30 @@
 {
-  "name": "",
+  "name": "Obliteration Knight",
   "spec": "fros",
   "profile": {
-    "name": "",
-    "race": "",
-    "reign": "",
+    "name": "Glisca",
+    "race": "zandalari-troll",
+    "reign": "Kazzak",
     "secondaryStats": {
-      "order": ["", "", "", ""],
+      "order": ["mastery", "haste", "critic", "versatility"],
       "mastery": null,
-      "haste": null,
+      "haste": "12 - 20",
       "versatility": null,
-      "critic": null
+      "critic": "10 - 15"
     }
   },
   "classSpecifics": [
     {
       "type": "weapon",
-      "value": ["dual-wield"]
+      "value": ["two-handed"]
     },
     {
       "type": "runeforge",
-      "value": ["", ""]
+      "value": ["rune-of-the-fallen-crusader"]
     }
   ],
   "mechanics":{
-    "values": ["", "", ""],
+    "values": ["might-of-the-frozen-wastes", "killing-machine", "obliteration", "rime", "inexorable-assault", "avalanche"],
     "extra": [
       {
         "title": "",
@@ -37,7 +37,7 @@
     ]
   },
   "skills":{
-    "values": ["", "", ""],
+    "values": ["obliterate", "pillar-of-frost", "deaths-due", "frost-strike", "howling-blast"],
     "extra": [
       {
         "title": "",
@@ -50,7 +50,7 @@
     ]
   },
   "talents":{
-    "values": ["", "", ""],
+    "values": ["inexorable-assault", "murderous-efficiency", "asphyxiate", "avalanche", "gathering-storm", "obliteration"],
     "pvp": [""],
     "extra": [
       {
@@ -65,13 +65,13 @@
   },
   "covenantLegendary": {
     "covenant": {
-      "utility": "",
-      "class": ""
+      "utility": "soulshape",
+      "class": "deaths-due"
     },
-    "legendary": ""
+    "legendary": "phearomones"
   },
   "soulbinds": {
     "who": "",
-    "values": ["", "", "", "", "", ""]
+    "values": ["grove-invigoration", "accelerated-cold", "run-without-tiring", "unending-grip", "swift-patrol", "hardened-bones", "unleashed-frenzy", "niyas-tools-poison"]
   }
 }

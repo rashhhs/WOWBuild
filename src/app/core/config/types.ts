@@ -10,6 +10,32 @@ export enum Expansion {
   Shadowlands = 'sha',
 }
 
+export enum Race {
+  BloodElf = 'blood-elf',
+  DarkIronDwarf = 'dark-iron-dwarf',
+  Draenei = 'draenei',
+  Dwarf = 'dwarf',
+  Gnome = 'gnome',
+  Goblin = 'golbin',
+  HighMountainTauren = 'highmountain-tauren',
+  Human = 'human',
+  KulTiran = 'kul-tiran',
+  LightforgedDraenei = 'lightforged-draenei',
+  MagharOrc = 'maghar-orc',
+  Mechagnome = 'mechagnome',
+  Nightborne = 'nightborne',
+  NightElf = 'night-elf',
+  Orc = 'orc',
+  Pandaren = 'pandaren',
+  Tauren = 'tauren',
+  Troll = 'troll',
+  Undead = 'undead',
+  VoidElf = 'void-elf',
+  Vulpera = 'vulpera',
+  Worgen = 'worgen',
+  ZandalariTroll = 'zandalari-troll',
+}
+
 export enum SecondaryStat {
   Critic = 'critic',
   Haste = 'haste',

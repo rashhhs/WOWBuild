@@ -1,16 +1,16 @@
 {
-  "name": "",
+  "name": "Infinite Pillar of Frost",
   "spec": "fros",
   "profile": {
-    "name": "",
-    "race": "",
-    "reign": "",
+    "name": "Eliferi",
+    "race": "dwarf",
+    "reign": "Sylvanas (EU)",
     "secondaryStats": {
-      "order": ["", "", "", ""],
+      "order": ["critic", "haste", "mastery", "versatility"],
       "mastery": null,
       "haste": null,
       "versatility": null,
-      "critic": null
+      "critic": "> 30"
     }
   },
   "classSpecifics": [
@@ -20,11 +20,11 @@
     },
     {
       "type": "runeforge",
-      "value": ["", ""]
+      "value": ["rune-of-razorice", "rune-of-the-fallen-crusader"]
     }
   ],
   "mechanics":{
-    "values": ["", "", ""],
+    "values": ["icecap", "killing-machine", "murderous-efficiency", "icy-talons", "gathering-storm"],
     "extra": [
       {
         "title": "",
@@ -37,7 +37,7 @@
     ]
   },
   "skills":{
-    "values": ["", "", ""],
+    "values": ["pillar-of-frost", "obliterate", "frostscythe", "frost-strike"],
     "extra": [
       {
         "title": "",
@@ -50,7 +50,7 @@
     ]
   },
   "talents":{
-    "values": ["", "", ""],
+    "values": ["icy-talons", "murderous-efficiency", "asphyxiate", "frostscythe", "permafrost", "gathering-storm", "icecap"],
     "pvp": [""],
     "extra": [
       {
@@ -65,10 +65,10 @@
   },
   "covenantLegendary": {
     "covenant": {
-      "utility": "",
-      "class": ""
+      "utility": "fleshcraft",
+      "class": "abomination-limb"
     },
-    "legendary": ""
+    "legendary": "koltiras-favor"
   },
   "soulbinds": {
     "who": "",

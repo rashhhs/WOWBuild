@@ -84,8 +84,9 @@ const BuildDetail = () => {
                   {translate('buildDetail.secondaries.orders')}
                 </Text>
                 <View style={C.itemsEnd}>
-                  {(buildDetail?.profile.secondaryStats.order ?? []).map(stat => (
+                  {(buildDetail?.profile.secondaryStats.order ?? []).map((stat, index) => (
                     <Text
+                      key={index}
                       variant={TextVariant.S}
                       weight={FontWeight.Regular}
                       color={TextColor.white}>
@@ -119,8 +120,8 @@ const BuildDetail = () => {
               </Text>
               <AwesomeIcon icon={'chevron-right'} size={32} />
             </View>
-            {(buildDetail?.classSpecifics ?? []).map((s, index) =>
-              s.value.map((value: Weapon | Runeforging) => (
+            {(buildDetail?.classSpecifics ?? []).map(s =>
+              s.value.map((value: Weapon | Runeforging, index: number) => (
                 <Text variant={TextVariant.S} weight={FontWeight.Regular} key={`${index}${value}`}>
                   {`Specific ${s.type}${value}`}
                 </Text>
@@ -192,13 +193,13 @@ const BuildDetail = () => {
               <AwesomeIcon icon={'chevron-right'} size={32} />
             </View>
             <Text variant={TextVariant.S} weight={FontWeight.Regular}>
-              {`Utility Covenant ${buildDetail?.covenantLegendary.covenant.utility}`}
+              {`Utility Covenant: ${buildDetail?.covenantLegendary.covenant.utility}`}
             </Text>
             <Text variant={TextVariant.S} weight={FontWeight.Regular}>
-              {`Class Covenant ${buildDetail?.covenantLegendary.covenant.class}`}
+              {`Class Covenant: ${buildDetail?.covenantLegendary.covenant.class}`}
             </Text>
             <Text variant={TextVariant.S} weight={FontWeight.Regular}>
-              {`Legendary ${buildDetail?.covenantLegendary.legendary}`}
+              {`Legendary: ${buildDetail?.covenantLegendary.legendary}`}
             </Text>
           </View>
         </TouchableOpacity>
@@ -213,7 +214,7 @@ const BuildDetail = () => {
             </View>
             {(buildDetail?.soulbinds.values ?? []).map((soulbind, index) => (
               <Text variant={TextVariant.S} weight={FontWeight.Regular} key={index}>
-                {`Soulbind ${soulbind}`}
+                {`Soulbind: ${soulbind}`}
               </Text>
             ))}
           </View>

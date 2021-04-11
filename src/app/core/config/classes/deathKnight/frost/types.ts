@@ -53,3 +53,10 @@ export enum PvpTalent {
   NecroticAura = 'necrotic-aura',
   Transfusion = 'transfusion',
 }
+
+export enum Conduit {
+  AcceleratedCold = 'accelerated-cold',
+  EradicatingBlow = 'eradicating-blow',
+  Everfrost = 'everfrost',
+  UnleashedFrenzy = 'unleashed-frenzy',
+}

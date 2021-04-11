@@ -65,13 +65,13 @@
   },
   "covenantLegendary": {
     "covenant": {
-      "utility": "",
-      "class": ""
+      "utility": "door-of-shadows",
+      "class": "swarming-mist"
     },
-    "legendary": ""
+    "legendary": "absolute-zero"
   },
   "soulbinds": {
     "who": "",
-    "values": ["", "", "", "", "", ""]
+    "values": ["thrill-seeker", "eradicating-blow", "agent-of-chaos", "spirit-drain", "friends-in-low-places", "hardened-bones", "reinforced-shell", "exacting-preparation"]
   }
 }
