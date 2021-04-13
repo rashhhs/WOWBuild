@@ -25,43 +25,80 @@
   ],
   "mechanics":{
     "values": ["murderous-efficiency", "cold-heart", "killing-machine"],
-    "extra": [
-      {
-        "title": "",
-        "content": ""
-      },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+    "extra": {
+      "others": [
+        {
+          "subtitle": "",
+          "content": [
+            {
+              "title": "murderous-efficiency",
+              "content": "Consume the effect of Killing Machine has a 50% to gain 1 rune"
+            },
+            {
+              "title": "cold-heart",
+              "content": "Every 2 seconds, the death knight gain 1 accumulation up to 20. The next Chain of ice will do damage depending the number of accumulations"
+            }
+          ]
+        }
+      ]
+    }
   },
   "skills":{
     "values": ["breath-of-sindragosa", "pillar-of-frost", "empower-rune-weapon", "hypothermic-presence", "obliterate", "frostwyrms-fury"],
-    "extra": [
-      {
-        "title": "",
-        "content": ""
+    "extra": {
+      "key": {
+        "title": "breath-of-sindragosa",
+        "content": "Breath of frost that does damage in cone in front of the character to all enemies.This ability is channeled and consumes a lot fo runic power.\n Meanwhile the ability is channeled the player has to generate as much runic power as could\n We will search a way to improve the damage during the channeling of Breath of Sindragosa with empowering skills and generating skill of runic power"
       },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+      "others": [
+        {
+          "subtitle": "Empowering Skills",
+          "content": [
+            {
+            "title": "pillar-of-frost",
+            "content": "The skill will improve the strength in 15%, +1% for every rune spent meanwhile the skill is active.\n This skill has a lot of sinergy with Breath of Sindragosa, because in order to keep 'up' the Breath, the death knight has to keep spending runes"
+            },
+            {
+              "title": "empower-rune-weapon",
+              "content": "This skill will increase the haste, giving the chance to attack and generate more runes"
+            },
+            {
+              "title": "hypothermic-presence",
+              "content": "Skill that will reduce in a 35% the amount of runic power spent for every skill. Excellent skill to help the death knight during the start of the Breath, enabling him to activate other skills and not being aware of runic power during the first 8 seconds"
+            }
+          ]
+        },
+        {
+          "subtitle": "Generating Skills",
+          "content": [
+            {
+            "title": "obliterate",
+            "content": "Main ability to spent runes and generate runic power in the process, needed for the Breath of Sindragosa"
+          }]
+        },
+        {
+          "subtitle": "Other Skills",
+          "content": [
+            {
+            "title": "frostwyrms-fury",
+            "content": "Burst area skill, that normally will be used when Breath of Sindragosa is in cd.\n This skill has been improved with the legendary power Absolute Zero"
+            }
+          ]
+        }
+      ]
+    }
   },
   "talents":{
     "values": ["cold-heart", "murderous-efficiency", "asphyxiate", "avalanche", "permafrost", "hypothermic-presence", "breath-of-sindragosa"],
     "pvp": [""],
-    "extra": [
-      {
-        "title": "",
-        "content": ""
-      },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+    "extra": {
+      "others": [
+        {
+          "subtitle": "",
+          "content": []
+        }
+      ]
+    }
   },
   "covenantLegendary": {
     "covenant": {

@@ -65,6 +65,11 @@ type ExtraLargeText = FontProps & {
   weight: FontWeight.Regular | FontWeight.Medium
 }
 
+type MediumText = FontProps & {
+  variant: TextVariant.Medium | TextVariant.M
+  weight: FontWeight.Bold | FontWeight.Regular
+}
+
 type LargeText = FontProps & {
   variant: TextVariant.Large | TextVariant.L
   weight: FontWeight.Bold | FontWeight.Regular
@@ -77,9 +82,10 @@ type SmallText = FontProps & {
 
 export type TextProps = PropsWithTypedChildren<
   | (RNTextProps & BasicText)
-  | (RNTextProps & ExtraLargeText)
+  | (RNTextProps & SmallText)
+  | (RNTextProps & MediumText)
   | (RNTextProps & LargeText)
-  | (RNTextProps & SmallText),
+  | (RNTextProps & ExtraLargeText),
   string
 >
 

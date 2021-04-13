@@ -25,43 +25,64 @@
   ],
   "mechanics":{
     "values": ["gathering-storm", "everfrost", "runic-empowerment", "cold-heart", "avalanche"],
-    "extra": [
-      {
-        "title": "",
-        "content": ""
-      },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+    "extra": {
+      "others": [
+        {
+          "subtitle": "",
+          "content": [
+            {
+              "title": "gathering-storm",
+              "content": "Every rune spent during Remorseless Winter improve into 10% the damage of the skill and give 0,5 seconds of extra time"
+            },
+            {
+            "title": "runic-empowerment",
+            "content": "Every point of runic power spent has a 2% to generate a rune"
+          },
+            {
+              "title": "cold-heart",
+              "content": "Every 2 seconds gives an accumulation of Cold Heart, up to 20. Improving depending the number of accumulations damge with the next Chain of Ice"
+            }
+          ]
+        }
+      ]
+    }
   },
   "skills":{
     "values": ["remorseless-winter", "breath-of-sindragosa", "horn-of-winter", "shackle-the-unworthy"],
-    "extra": [
-      {
-        "title": "",
-        "content": ""
+    "extra": {
+      "key": {
+        "title": "remorseless-winter",
+        "content": "Area skill that deals damage to all enemies around the death knight. \n We will search ways to keep as many time as possible the skill up. And as a main objective being up always in combat. To do that final step, it will be necessary search the amount of haste need it to achieve that.\n Moreover, this build will search the way to increase the damage of the skill, spending as many runes as possible when the skill is active, searching skills that spent and generate runes"
       },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+      "others": [
+        {
+          "subtitle": "",
+          "content": [{
+            "title": "breath-of-sindragosa",
+            "content": "Breath of Sindragosa is a very powerful talent that generates 3 runes when it is active. Also, when the death knight is run out of runic power it will give extra 3 runes"
+          }]
+        }
+      ]
+    }
   },
   "talents":{
     "values": ["cold-heart", "horn-of-winter", "asphyxiate", "avalanche", "permafrost", "gathering-storm", "breath-of-sindragosa"],
     "pvp": [""],
-    "extra": [
-      {
+    "extra": {
+      "key": {
         "title": "",
         "content": ""
       },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+      "others": [
+        {
+          "subtitle": "",
+          "content": [{
+            "title": "",
+            "content": ""
+          }]
+        }
+      ]
+    }
   },
   "covenantLegendary": {
     "covenant": {
