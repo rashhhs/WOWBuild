@@ -25,43 +25,89 @@
   ],
   "mechanics":{
     "values": ["might-of-the-frozen-wastes", "killing-machine", "obliteration", "rime", "inexorable-assault", "avalanche"],
-    "extra": [
-      {
-        "title": "",
-        "content": ""
-      },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+    "extra": {
+      "others": [
+        {
+          "subtitle": "",
+          "content": [
+          {
+            "title": "might-of-the-frozen-wastes",
+            "content": "Increases the damage of Obliterate con two handed weapons in a 30%. Moreover, increases the chance to critically hit con auto attacks"
+          },
+          {
+            "title": "killing-machine",
+            "content": "Critically hits with auto attacks provokes that the next Obliterate will be crític and does frost damage."
+          },
+          {
+            "title": "obliteration",
+            "content": "Meanwhile Pilar of Frost is active, Frost Strike and Howling Blast always trigger Killing Machine. Also, has a 30% to generate a rune"
+          },
+          {
+            "title": "rime",
+            "content": "Obliterate has a 45% tto provoke the next Howling Blast to deal 300% damage and no cost rune"
+          },
+          {
+            "title": "inexorable-assault",
+            "content": "Every 8 seconds gives an accumulation up to 5. Every accumulation gives extra frost damage to an Obliterate"
+          },
+          {
+            "title": "avalanche",
+            "content": "Howling Blast deals extra frost damage"
+          }]
+        }
+      ]
+    }
   },
   "skills":{
     "values": ["obliterate", "pillar-of-frost", "deaths-due", "frost-strike", "howling-blast"],
-    "extra": [
-      {
-        "title": "",
-        "content": ""
+    "extra": {
+      "key": {
+        "title": "Obliterate",
+        "content": "Basic physical strike of the frost death knight. When Killing Machine is active, it deals always a critically hit and the damage is frost. Dealing super strikes of a lot of damage.\n That's why we will search ways to improve that strikes"
       },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+      "others": [
+        {
+          "subtitle": "Most important active",
+          "content": [
+            {
+              "title": "pillar-of-frost",
+              "content": "This skill will increase the strength a lot and triggers the Obliteration mechanic. Provoking basic skills of the death knight will trigger a Killing Machine always"
+            }
+          ]
+        },
+        {
+          "subtitle": "Skills that generate Killing Machine during Pillar of Frost",
+          "content": [
+            {
+              "title": "frost-strike",
+              "content": ""
+            },
+            {
+              "title": "howling-blast",
+              "content": ""
+            }
+          ]
+        }
+      ]
+    }
   },
   "talents":{
     "values": ["inexorable-assault", "murderous-efficiency", "asphyxiate", "avalanche", "gathering-storm", "obliteration"],
     "pvp": [""],
-    "extra": [
-      {
+    "extra": {
+      "key": {
         "title": "",
         "content": ""
       },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+      "others": [
+        {
+          "content": [{
+            "title": "",
+            "content": ""
+          }]
+        }
+      ]
+    }
   },
   "covenantLegendary": {
     "covenant": {

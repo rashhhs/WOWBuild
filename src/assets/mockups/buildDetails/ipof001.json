@@ -25,43 +25,56 @@
   ],
   "mechanics":{
     "values": ["icecap", "killing-machine", "murderous-efficiency", "icy-talons", "gathering-storm"],
-    "extra": [
-      {
-        "title": "",
-        "content": ""
-      },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+    "extra": {
+      "others": [
+        {
+          "subtitle": "",
+          "content": [
+          {
+            "title": "",
+            "content": ""
+          }
+          ]
+        }
+      ]
+    }
   },
   "skills":{
     "values": ["pillar-of-frost", "obliterate", "frostscythe", "frost-strike"],
-    "extra": [
-      {
+    "extra": {
+      "key": {
         "title": "",
         "content": ""
       },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+      "others": [
+        {
+          "subtitle": "",
+          "content": [{
+            "title": "",
+            "content": ""
+          }]
+        }
+      ]
+    }
   },
   "talents":{
     "values": ["icy-talons", "murderous-efficiency", "asphyxiate", "frostscythe", "permafrost", "gathering-storm", "icecap"],
     "pvp": [""],
-    "extra": [
-      {
+    "extra": {
+      "key": {
         "title": "",
         "content": ""
       },
-      {
-        "title": "",
-        "content": ""
-      }
-    ]
+      "others": [
+        {
+          "subtitle": "",
+          "content": [{
+            "title": "",
+            "content": ""
+          }]
+        }
+      ]
+    }
   },
   "covenantLegendary": {
     "covenant": {

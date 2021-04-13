@@ -118,7 +118,7 @@ const BuildDetail = () => {
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>
                 {translate('buildDetail.classSpecifics')}
               </Text>
-              <AwesomeIcon icon={'chevron-right'} size={32} />
+              {/*<AwesomeIcon icon={'chevron-right'} size={32} />*/}
             </View>
             {(buildDetail?.classSpecifics ?? []).map(s =>
               s.value.map((value: Weapon | Runeforging, index: number) => (
@@ -130,7 +130,13 @@ const BuildDetail = () => {
           </View>
         </TouchableOpacity>
         {/* Mechanics */}
-        <TouchableOpacity onPress={() => navigate(SCREEN_BUILD_FRAGMENT, { title: 'Mechanics' })}>
+        <TouchableOpacity
+          onPress={() =>
+            navigate(SCREEN_BUILD_FRAGMENT, {
+              title: 'Mechanics',
+              fragment: buildDetail?.mechanics.extra,
+            })
+          }>
           <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
             <View style={apply(C.row, C.flex, C.justifyBetween)}>
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>
@@ -146,7 +152,13 @@ const BuildDetail = () => {
           </View>
         </TouchableOpacity>
         {/* Skills */}
-        <TouchableOpacity onPress={() => navigate(SCREEN_BUILD_FRAGMENT, { title: 'Skills' })}>
+        <TouchableOpacity
+          onPress={() =>
+            navigate(SCREEN_BUILD_FRAGMENT, {
+              title: 'Skills',
+              fragment: buildDetail?.skills.extra,
+            })
+          }>
           <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
             <View style={apply(C.row, C.flex, C.justifyBetween)}>
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>
@@ -162,7 +174,13 @@ const BuildDetail = () => {
           </View>
         </TouchableOpacity>
         {/* Talents */}
-        <TouchableOpacity onPress={() => navigate(SCREEN_BUILD_FRAGMENT, { title: 'Talents' })}>
+        <TouchableOpacity
+          onPress={() =>
+            navigate(SCREEN_BUILD_FRAGMENT, {
+              title: 'Talents',
+              fragment: buildDetail?.talents.extra,
+            })
+          }>
           <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
             <View style={apply(C.row, C.flex, C.justifyBetween)}>
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>
@@ -190,7 +208,7 @@ const BuildDetail = () => {
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>
                 {translate('buildDetail.covenantLegendary')}
               </Text>
-              <AwesomeIcon icon={'chevron-right'} size={32} />
+              {/*<AwesomeIcon icon={'chevron-right'} size={32} />*/}
             </View>
             <Text variant={TextVariant.S} weight={FontWeight.Regular}>
               {`Utility Covenant: ${buildDetail?.covenantLegendary.covenant.utility}`}
@@ -210,7 +228,7 @@ const BuildDetail = () => {
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>
                 {`Soulbinds: ${buildDetail?.soulbinds.who}`}
               </Text>
-              <AwesomeIcon icon={'chevron-right'} size={32} />
+              {/*<AwesomeIcon icon={'chevron-right'} size={32} />*/}
             </View>
             {(buildDetail?.soulbinds.values ?? []).map((soulbind, index) => (
               <Text variant={TextVariant.S} weight={FontWeight.Regular} key={index}>
