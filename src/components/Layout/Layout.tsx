@@ -35,10 +35,9 @@ const Layout = ({
   }, [statusBarColor])
 
   return (
-    <>
+    <View style={C.flex} testID={testID}>
       <SafeAreaView
-        style={apply(C.bgBackdrop, C.flex, withTabs ? { paddingBottom: -insets.bottom } : {})}
-        {...testID}>
+        style={apply(C.bgBackdrop, C.flex, withTabs ? { paddingBottom: -insets.bottom } : {})}>
         {!hideHeader ? (
           <View
             style={classNames('h16 py4 row pr4 itemsCenter', {
@@ -48,7 +47,8 @@ const Layout = ({
               <TouchableOpacity
                 style={apply(C.w8, C.h16, C.justifyCenter, C.w12, C.pl4)}
                 onPress={onBack}
-                activeOpacity={0.8}>
+                activeOpacity={0.8}
+                testID={`${testID}-back-button`}>
                 <AwesomeIcon
                   icon="chevron-left"
                   variant={AwesomeIconVariant.Regular}
@@ -77,7 +77,7 @@ const Layout = ({
         {children}
       </SafeAreaView>
       {!hideKeyboardSpacer && Platform.OS === 'ios' && <KeyboardSpacer topSpacing={0} />}
-    </>
+    </View>
   )
 }
 

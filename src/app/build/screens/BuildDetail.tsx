@@ -64,7 +64,13 @@ const BuildDetail = () => {
   }, [fetch, clearBuildDetail])
 
   return (
-    <Layout title={buildDetail?.name} insets={insets} withTabs withBack onBack={onBackPressed}>
+    <Layout
+      title={buildDetail?.name}
+      insets={insets}
+      withTabs
+      withBack
+      onBack={onBackPressed}
+      testID={'build-detail-layout'}>
       <ScrollView bounces={false}>
         {/* General Information */}
         <View style={apply(C.flex, C.m2, C.p2, C.bgSquidInk, C.radius2)}>
@@ -136,7 +142,8 @@ const BuildDetail = () => {
               title: 'Mechanics',
               fragment: buildDetail?.mechanics.extra,
             })
-          }>
+          }
+          testID={'build-detail-mechanics-widget'}>
           <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
             <View style={apply(C.row, C.flex, C.justifyBetween)}>
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>

@@ -19,7 +19,7 @@ const Builds = () => {
   const builds = useBuilds()
 
   return (
-    <Layout insets={insets} title={translate('builds.title')} withTabs>
+    <Layout insets={insets} title={translate('builds.title')} withTabs testID={'build-list-layout'}>
       <FlatList
         data={builds}
         keyExtractor={({ id }) => id}
@@ -38,7 +38,8 @@ const Builds = () => {
               )}
               onPress={() => {
                 navigate(SCREEN_BUILD_DETAIL, { id: item.id })
-              }}>
+              }}
+              testID={`build-list-item-${index}`}>
               <View style={apply(C.row, C.itemsCenter)}>
                 <FastImage
                   style={apply(C.w6, C.h6, C.mr2) as ImageStyle}
