@@ -23,7 +23,12 @@ const BuildFragment = () => {
   }
 
   return (
-    <Layout title={params.title} withBack insets={insets} onBack={onBackPressed}>
+    <Layout
+      title={params.title}
+      withBack
+      insets={insets}
+      onBack={onBackPressed}
+      testID={'build-fragment-layout'}>
       <ScrollView>
         {fragment ? (
           <View style={C.m2}>
