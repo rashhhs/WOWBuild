@@ -4,14 +4,32 @@
   "profile": {
     "name": "Glisca",
     "race": "zandalari-troll",
-    "reign": "Kazzak",
-    "secondaryStats": {
-      "order": ["mastery", "haste", "critic", "versatility"],
-      "mastery": null,
-      "haste": "12 - 20",
-      "versatility": null,
-      "critic": "10 - 15"
-    }
+    "reign": "Kazzak"
+  },
+  "secondaryStats": {
+    "order": ["mastery", "haste", "critic", "versatility"],
+    "mastery": null,
+    "haste": "12 - 20",
+    "versatility": null,
+    "critic": "10 - 15",
+    "extra": [
+      {
+        "title": "mastery",
+        "content": "Main statistic, we will seek to have as much as possible"
+      },
+      {
+        "title": "haste",
+        "content": "This build is based in hit strongly with critic Obliterates. And because of being a build with two handed weapons, the speed of the base attacks are slow. That's why improve the attack speed with haste is mandatory.\n The most important part, it will be during the Obliteration phase and the death knight must have between 35-65% os haste during those phases, in order to spam critics with Obliterate"
+      },
+      {
+        "title": "critic",
+        "content": "This statistic would be less important, because Obliteration phase it creates a lot of Killing Machines. \n But, generate some critics outside the Obliteration phase might be better than gives extra damage to the critics inside the Obliteration"
+      },
+      {
+        "title": "versatility",
+        "content": "Less important secondary, it will be only choose, if we haven't other better options"
+      }
+    ]
   },
   "classSpecifics": [
     {
@@ -32,11 +50,11 @@
           "content": [
           {
             "title": "might-of-the-frozen-wastes",
-            "content": "Increases the damage of Obliterate con two handed weapons in a 30%. Moreover, increases the chance to critically hit con auto attacks"
+            "content": "Increases the damage of Obliterate with two handed weapons in a 30%. Moreover, increases the chance to critically hit with auto attacks"
           },
           {
             "title": "killing-machine",
-            "content": "Critically hits with auto attacks provokes that the next Obliterate will be crític and does frost damage."
+            "content": "Critically hits with auto attacks provokes that the next Obliterate will be critic and does frost damage."
           },
           {
             "title": "obliteration",
@@ -44,7 +62,7 @@
           },
           {
             "title": "rime",
-            "content": "Obliterate has a 45% tto provoke the next Howling Blast to deal 300% damage and no cost rune"
+            "content": "Obliterate has a 45% to provoke the next Howling Blast to deal 300% damage and no cost rune"
           },
           {
             "title": "inexorable-assault",
@@ -63,7 +81,7 @@
     "extra": {
       "key": {
         "title": "Obliterate",
-        "content": "Basic physical strike of the frost death knight. When Killing Machine is active, it deals always a critically hit and the damage is frost. Dealing super strikes of a lot of damage.\n That's why we will search ways to improve that strikes"
+        "content": "Basic physical strike of the frost death knight. When Killing Machine is active, it deals always a critically hit and the damage is frost. Dealing super strikes with a lot of damage.\n That's why, we will search ways to improve that strikes"
       },
       "others": [
         {
@@ -71,7 +89,7 @@
           "content": [
             {
               "title": "pillar-of-frost",
-              "content": "This skill will increase the strength a lot and triggers the Obliteration mechanic. Provoking basic skills of the death knight will trigger a Killing Machine always"
+              "content": "This skill will increase the strength a lot and triggers the Obliteration mechanic. Provoking basic skills of the death knight will trigger a Killing Machine"
             }
           ]
         },
@@ -93,21 +111,7 @@
   },
   "talents":{
     "values": ["inexorable-assault", "murderous-efficiency", "asphyxiate", "avalanche", "gathering-storm", "obliteration"],
-    "pvp": [""],
-    "extra": {
-      "key": {
-        "title": "",
-        "content": ""
-      },
-      "others": [
-        {
-          "content": [{
-            "title": "",
-            "content": ""
-          }]
-        }
-      ]
-    }
+    "pvp": [""]
   },
   "covenantLegendary": {
     "covenant": {

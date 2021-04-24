@@ -11,7 +11,7 @@ import { RootStackParamList } from 'src/utils/types'
 
 const BuildFragment = () => {
   const { params } = useRoute<RouteProp<RootStackParamList, 'BuildFragment'>>()
-  const { fragment } = params
+  const { fragment, contents } = params
   const insets = useSafeAreaInsets()
   const { goBack } = useNavigation()
   const { hideTabs } = useTabs()
@@ -30,6 +30,21 @@ const BuildFragment = () => {
       onBack={onBackPressed}
       testID={'build-fragment-layout'}>
       <ScrollView>
+        {(contents ?? []).map((content, index) => (
+          <View style={C.m2}>
+            <View style={C.mb4} key={index}>
+              <Text
+                variant={TextVariant.Medium}
+                weight={FontWeight.Bold}
+                style={apply(C.flex, C.mb2, { textDecorationLine: 'underline' })}>
+                {`${content.title}: `}
+              </Text>
+              <Text variant={TextVariant.S} weight={FontWeight.Regular} style={C.flex}>
+                {content.content}
+              </Text>
+            </View>
+          </View>
+        ))}
         {fragment ? (
           <View style={C.m2}>
             {fragment.key ? (

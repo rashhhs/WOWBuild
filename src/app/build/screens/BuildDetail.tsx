@@ -1,5 +1,5 @@
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native'
-import React, { useEffect, useCallback } from 'react'
+import React, { useEffect, useCallback, useMemo } from 'react'
 import { ScrollView, TouchableOpacity, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
@@ -40,21 +40,33 @@ const BuildDetail = () => {
       let value = ''
       switch (secondaryStat) {
         case SecondaryStat.Critic:
-          value = buildDetail?.profile.secondaryStats.critic || ''
+          value = buildDetail?.secondaryStats.critic || ''
           break
         case SecondaryStat.Haste:
-          value = buildDetail?.profile.secondaryStats.haste || ''
+          value = buildDetail?.secondaryStats.haste || ''
           break
         case SecondaryStat.Mastery:
-          value = buildDetail?.profile.secondaryStats.mastery || ''
+          value = buildDetail?.secondaryStats.mastery || ''
           break
         case SecondaryStat.Versatility:
-          value = buildDetail?.profile.secondaryStats.versatility || ''
+          value = buildDetail?.secondaryStats.versatility || ''
           break
       }
       return stringIsEmpty(value) ? value : `${value} %`
     }
   }
+
+  const hasSecondaryStatsExtraContent = useMemo(() => {
+    return !!buildDetail?.secondaryStats.extra
+  }, [buildDetail?.secondaryStats])
+
+  const hasMechanicsExtraContent = useMemo(() => {
+    return !!buildDetail?.mechanics.extra
+  }, [buildDetail?.mechanics])
+
+  const hasSkillsExtraContent = useMemo(() => {
+    return !!buildDetail?.skills.extra
+  }, [buildDetail?.skills])
 
   const fetch = useCallback(() => fetchBuildDetail?.(id), [fetchBuildDetail, id])
 
@@ -71,7 +83,7 @@ const BuildDetail = () => {
       withBack
       onBack={onBackPressed}
       testID={'build-detail-layout'}>
-      <ScrollView bounces={false}>
+      <ScrollView bounces={false} showsVerticalScrollIndicator={false}>
         {/* General Information */}
         <View style={apply(C.flex, C.m2, C.p2, C.bgSquidInk, C.radius2)}>
           <View style={apply(C.row)}>
@@ -85,22 +97,6 @@ const BuildDetail = () => {
                 })}>
                 {buildDetail?.profile?.name ?? translate('buildDetail.characterName')}
               </Text>
-              <View style={apply(C.row, C.mt1)}>
-                <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.white}>
-                  {translate('buildDetail.secondaries.orders')}
-                </Text>
-                <View style={C.itemsEnd}>
-                  {(buildDetail?.profile.secondaryStats.order ?? []).map((stat, index) => (
-                    <Text
-                      key={index}
-                      variant={TextVariant.S}
-                      weight={FontWeight.Regular}
-                      color={TextColor.white}>
-                      {`${translate(`buildDetail.secondaries.${stat}`)} ${secondaryValue(stat)}`}
-                    </Text>
-                  ))}
-                </View>
-              </View>
             </View>
             <View style={apply(C.flex, C.itemsEnd)}>
               <Text
@@ -116,32 +112,58 @@ const BuildDetail = () => {
             </View>
           </View>
         </View>
-        {/* Class Specifics */}
+        {/* Secondary Statistics */}
         <TouchableOpacity
-          onPress={() => navigate(SCREEN_BUILD_FRAGMENT, { title: 'Class specifics' })}>
+          activeOpacity={hasSecondaryStatsExtraContent ? 0.8 : 1}
+          onPress={() =>
+            hasSecondaryStatsExtraContent
+              ? navigate(SCREEN_BUILD_FRAGMENT, {
+                  title: translate('buildDetail.secondaries.orders'),
+                  contents: buildDetail?.secondaryStats.extra,
+                })
+              : {}
+          }>
           <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
             <View style={apply(C.row, C.flex, C.justifyBetween)}>
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>
-                {translate('buildDetail.classSpecifics')}
+                {translate('buildDetail.secondaries.orders')}
               </Text>
-              {/*<AwesomeIcon icon={'chevron-right'} size={32} />*/}
+              {hasSecondaryStatsExtraContent ? (
+                <AwesomeIcon icon={'chevron-right'} size={32} />
+              ) : null}
             </View>
-            {(buildDetail?.classSpecifics ?? []).map(s =>
-              s.value.map((value: Weapon | Runeforging, index: number) => (
-                <Text variant={TextVariant.S} weight={FontWeight.Regular} key={`${index}${value}`}>
-                  {`Specific ${s.type}${value}`}
-                </Text>
-              )),
-            )}
+            {(buildDetail?.secondaryStats.order ?? []).map((stat, index) => (
+              <Text key={index} variant={TextVariant.S} weight={FontWeight.Regular}>
+                {`${translate(`buildDetail.secondaries.${stat}`)} ${secondaryValue(stat)}`}
+              </Text>
+            ))}
           </View>
         </TouchableOpacity>
+        {/* Class Specifics */}
+        <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
+          <View style={apply(C.row, C.flex, C.justifyBetween)}>
+            <Text variant={TextVariant.L} weight={FontWeight.Regular}>
+              {translate('buildDetail.classSpecifics')}
+            </Text>
+          </View>
+          {(buildDetail?.classSpecifics ?? []).map(s =>
+            s.value.map((value: Weapon | Runeforging, index: number) => (
+              <Text variant={TextVariant.S} weight={FontWeight.Regular} key={`${index}${value}`}>
+                {`Specific ${s.type}${value}`}
+              </Text>
+            )),
+          )}
+        </View>
         {/* Mechanics */}
         <TouchableOpacity
+          activeOpacity={hasSecondaryStatsExtraContent ? 0.8 : 1}
           onPress={() =>
-            navigate(SCREEN_BUILD_FRAGMENT, {
-              title: 'Mechanics',
-              fragment: buildDetail?.mechanics.extra,
-            })
+            hasMechanicsExtraContent
+              ? navigate(SCREEN_BUILD_FRAGMENT, {
+                  title: 'Mechanics',
+                  fragment: buildDetail?.mechanics.extra,
+                })
+              : {}
           }
           testID={'build-detail-mechanics-widget'}>
           <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
@@ -149,7 +171,7 @@ const BuildDetail = () => {
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>
                 {translate('buildDetail.mechanics')}
               </Text>
-              <AwesomeIcon icon={'chevron-right'} size={32} />
+              {hasMechanicsExtraContent ? <AwesomeIcon icon={'chevron-right'} size={32} /> : null}
             </View>
             {(buildDetail?.mechanics.values ?? []).map((mechanic, index) => (
               <Text variant={TextVariant.S} weight={FontWeight.Regular} key={index}>
@@ -160,18 +182,21 @@ const BuildDetail = () => {
         </TouchableOpacity>
         {/* Skills */}
         <TouchableOpacity
+          activeOpacity={hasSecondaryStatsExtraContent ? 0.8 : 1}
           onPress={() =>
-            navigate(SCREEN_BUILD_FRAGMENT, {
-              title: 'Skills',
-              fragment: buildDetail?.skills.extra,
-            })
+            hasSkillsExtraContent
+              ? navigate(SCREEN_BUILD_FRAGMENT, {
+                  title: 'Skills',
+                  fragment: buildDetail?.skills.extra,
+                })
+              : {}
           }>
           <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
             <View style={apply(C.row, C.flex, C.justifyBetween)}>
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>
                 {translate('buildDetail.skills')}
               </Text>
-              <AwesomeIcon icon={'chevron-right'} size={32} />
+              {hasSkillsExtraContent ? <AwesomeIcon icon={'chevron-right'} size={32} /> : null}
             </View>
             {(buildDetail?.skills.values ?? []).map((skill, index) => (
               <Text variant={TextVariant.S} weight={FontWeight.Regular} key={index}>
@@ -181,69 +206,53 @@ const BuildDetail = () => {
           </View>
         </TouchableOpacity>
         {/* Talents */}
-        <TouchableOpacity
-          onPress={() =>
-            navigate(SCREEN_BUILD_FRAGMENT, {
-              title: 'Talents',
-              fragment: buildDetail?.talents.extra,
-            })
-          }>
-          <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
-            <View style={apply(C.row, C.flex, C.justifyBetween)}>
-              <Text variant={TextVariant.L} weight={FontWeight.Regular}>
-                {translate('buildDetail.talents')}
-              </Text>
-              <AwesomeIcon icon={'chevron-right'} size={32} />
-            </View>
-            {(buildDetail?.talents.values ?? []).map((talent, index) => (
-              <Text variant={TextVariant.S} weight={FontWeight.Regular} key={index}>
-                {`Talent: ${talent}`}
-              </Text>
-            ))}
-            {(buildDetail?.talents.pvp ?? []).map((talent, index) => (
-              <Text variant={TextVariant.S} weight={FontWeight.Regular} key={index}>
-                {`PVP Talent: ${talent}`}
-              </Text>
-            ))}
+        <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
+          <View style={apply(C.row, C.flex, C.justifyBetween)}>
+            <Text variant={TextVariant.L} weight={FontWeight.Regular}>
+              {translate('buildDetail.talents')}
+            </Text>
           </View>
-        </TouchableOpacity>
+          {(buildDetail?.talents.values ?? []).map((talent, index) => (
+            <Text variant={TextVariant.S} weight={FontWeight.Regular} key={index}>
+              {`Talent: ${talent}`}
+            </Text>
+          ))}
+          {(buildDetail?.talents.pvp ?? []).map((talent, index) => (
+            <Text variant={TextVariant.S} weight={FontWeight.Regular} key={index}>
+              {`PVP Talent: ${talent}`}
+            </Text>
+          ))}
+        </View>
         {/* Covenant & Legendary */}
-        <TouchableOpacity
-          onPress={() => navigate(SCREEN_BUILD_FRAGMENT, { title: 'Covenant & Legendary' })}>
-          <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
-            <View style={apply(C.row, C.flex, C.justifyBetween)}>
-              <Text variant={TextVariant.L} weight={FontWeight.Regular}>
-                {translate('buildDetail.covenantLegendary')}
-              </Text>
-              {/*<AwesomeIcon icon={'chevron-right'} size={32} />*/}
-            </View>
-            <Text variant={TextVariant.S} weight={FontWeight.Regular}>
-              {`Utility Covenant: ${buildDetail?.covenantLegendary.covenant.utility}`}
-            </Text>
-            <Text variant={TextVariant.S} weight={FontWeight.Regular}>
-              {`Class Covenant: ${buildDetail?.covenantLegendary.covenant.class}`}
-            </Text>
-            <Text variant={TextVariant.S} weight={FontWeight.Regular}>
-              {`Legendary: ${buildDetail?.covenantLegendary.legendary}`}
+        <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
+          <View style={apply(C.row, C.flex, C.justifyBetween)}>
+            <Text variant={TextVariant.L} weight={FontWeight.Regular}>
+              {translate('buildDetail.covenantLegendary')}
             </Text>
           </View>
-        </TouchableOpacity>
+          <Text variant={TextVariant.S} weight={FontWeight.Regular}>
+            {`Utility Covenant: ${buildDetail?.covenantLegendary.covenant.utility}`}
+          </Text>
+          <Text variant={TextVariant.S} weight={FontWeight.Regular}>
+            {`Class Covenant: ${buildDetail?.covenantLegendary.covenant.class}`}
+          </Text>
+          <Text variant={TextVariant.S} weight={FontWeight.Regular}>
+            {`Legendary: ${buildDetail?.covenantLegendary.legendary}`}
+          </Text>
+        </View>
         {/* Soulbinds */}
-        <TouchableOpacity onPress={() => navigate(SCREEN_BUILD_FRAGMENT, { title: 'Soulbinds' })}>
-          <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
-            <View style={apply(C.row, C.flex, C.justifyBetween)}>
-              <Text variant={TextVariant.L} weight={FontWeight.Regular}>
-                {`Soulbinds: ${buildDetail?.soulbinds.who}`}
-              </Text>
-              {/*<AwesomeIcon icon={'chevron-right'} size={32} />*/}
-            </View>
-            {(buildDetail?.soulbinds.values ?? []).map((soulbind, index) => (
-              <Text variant={TextVariant.S} weight={FontWeight.Regular} key={index}>
-                {`Soulbind: ${soulbind}`}
-              </Text>
-            ))}
+        <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
+          <View style={apply(C.row, C.flex, C.justifyBetween)}>
+            <Text variant={TextVariant.L} weight={FontWeight.Regular}>
+              {`Soulbinds: ${buildDetail?.soulbinds.who}`}
+            </Text>
           </View>
-        </TouchableOpacity>
+          {(buildDetail?.soulbinds.values ?? []).map((soulbind, index) => (
+            <Text variant={TextVariant.S} weight={FontWeight.Regular} key={index}>
+              {`Soulbind: ${soulbind}`}
+            </Text>
+          ))}
+        </View>
       </ScrollView>
     </Layout>
   )

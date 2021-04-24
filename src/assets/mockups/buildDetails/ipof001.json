@@ -4,14 +4,14 @@
   "profile": {
     "name": "Eliferi",
     "race": "dwarf",
-    "reign": "Sylvanas (EU)",
-    "secondaryStats": {
-      "order": ["critic", "haste", "mastery", "versatility"],
-      "mastery": null,
-      "haste": null,
-      "versatility": null,
-      "critic": "> 30"
-    }
+    "reign": "Sylvanas (EU)"
+  },
+  "secondaryStats": {
+    "order": ["critic", "haste", "mastery", "versatility"],
+    "mastery": null,
+    "haste": null,
+    "versatility": null,
+    "critic": "> 30"
   },
   "classSpecifics": [
     {
