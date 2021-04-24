@@ -41,6 +41,7 @@ export type BackendBuildDetail = {
   name: string
   spec: string
   profile: BuildProfile
+  secondaryStats: SecondaryStats
   classSpecifics: BackendClassSpecificBuild[]
   mechanics: BackendMechanics
   skills: BackendSkills
@@ -54,6 +55,7 @@ export type BuildDetail = {
   name: string
   spec: string
   profile: BuildProfile
+  secondaryStats: SecondaryStats
   classSpecifics: ClassSpecificBuild[]
   mechanics: Mechanics
   skills: Skills
@@ -66,7 +68,6 @@ export type BuildProfile = {
   name: string
   race: string
   reign: string
-  secondaryStats: SecondaryStats
 }
 
 export type SecondaryStats = {
@@ -75,6 +76,7 @@ export type SecondaryStats = {
   haste: string | null
   versatility: string | null
   critic: string | null
+  extra?: ExtraContent[]
 }
 
 export type BackendClassSpecificBuild = {

@@ -1,4 +1,4 @@
-import { Fragment } from 'src/app/build/types'
+import { ExtraContent, Fragment } from 'src/app/build/types'
 
 export type Generic<T = any, K = string> = {
   // @ts-ignore
@@ -15,5 +15,5 @@ export type Timestamp = number
 
 export type RootStackParamList = {
   BuildDetail: { id: string }
-  BuildFragment: { title: string; fragment: Fragment }
+  BuildFragment: { title: string; fragment?: Fragment; contents?: ExtraContent[] }
 }

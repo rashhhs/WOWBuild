@@ -4,14 +4,14 @@
   "profile": {
     "name": "Gruhgmor",
     "race": "Orc",
-    "reign": "Stormscale (EU)",
-    "secondaryStats": {
-      "order": ["mastery", "critic", "versatility", "haste"],
-      "mastery": "> 40 ",
-      "haste": null,
-      "versatility": null,
-      "critic": "20 - 30"
-    }
+    "reign": "Stormscale (EU)"
+  },
+  "secondaryStats": {
+    "order": ["mastery", "critic", "versatility", "haste"],
+    "mastery": "> 40 ",
+    "haste": null,
+    "versatility": null,
+    "critic": "20 - 30"
   },
   "classSpecifics": [
     {

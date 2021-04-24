@@ -5,7 +5,7 @@
   "buildDetail": {
     "characterName": "Nombre",
     "secondaries": {
-      "orders": "Estadísticas secundarias: ",
+      "orders": "Estadísticas secundarias",
       "critic": "Crítico",
       "haste": "Celeridad",
       "mastery": "Maestria",

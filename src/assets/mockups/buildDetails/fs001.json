@@ -4,14 +4,14 @@
   "profile": {
     "name": "Joshuaas",
     "race": "human",
-    "reign": "Outland (EU)",
-    "secondaryStats": {
-      "order": ["mastery", "haste", "versatility", "critic"],
-      "mastery": null,
-      "haste": "15 - 25",
-      "versatility": null,
-      "critic": null
-    }
+    "reign": "Outland (EU)"
+  },
+  "secondaryStats": {
+    "order": ["mastery", "haste", "versatility", "critic"],
+    "mastery": null,
+    "haste": "15 - 25",
+    "versatility": null,
+    "critic": null
   },
   "classSpecifics": [
     {

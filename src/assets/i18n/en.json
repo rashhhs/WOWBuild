@@ -5,7 +5,7 @@
   "buildDetail": {
     "characterName": "Character Name",
     "secondaries": {
-      "orders": "Secondaries order: ",
+      "orders": "Secondaries order",
       "critic": "Critic",
       "haste": "Haste",
       "mastery": "Mastery",
