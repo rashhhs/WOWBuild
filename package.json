@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest /app/",
     "lint": "eslint .",
     "e2e:build:ios": "detox build -c ios.sim.debug",
     "e2e:build:android": "detox build -c android.emu.debug",
@@ -48,6 +48,7 @@
     "@babel/runtime": "^7.13.10",
     "@react-native-community/eslint-config": "^2.0.0",
     "@testing-library/jest-native": "^4.0.1",
+    "@testing-library/react-native": "^7.2.0",
     "@trivago/prettier-plugin-sort-imports": "^2.0.2",
     "@types/detox": "^17.14.0",
     "@types/i18n-js": "^3.8.0",
@@ -97,6 +98,7 @@
     "runner-config": "e2e/config.json"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"]
   }
 }

@@ -91,7 +91,7 @@ export type ClassSpecificBuild = {
 
 export type BackendSkills = {
   values: string[]
-  extra: Fragment
+  extra?: Fragment
 }
 
 export type BackendMechanics = BackendSkills
@@ -102,7 +102,7 @@ export type BackendTalents = BackendSkills & {
 
 export type Skills = {
   values: Skill[]
-  extra: Fragment
+  extra?: Fragment
 }
 
 export type Mechanics = Skills
