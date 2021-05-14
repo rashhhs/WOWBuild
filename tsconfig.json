@@ -16,7 +16,9 @@
     "paths": {
       "*": ["*"],
       "src/*": ["src/*"],
-      "tests": ["tests/*"]
+      "test/app/*": ["__tests__/app/*"],
+      "test/mocks/*": ["__tests__/__mocks__/*"],
+      "test/assets/*": ["__tests__/__assets__/*"]
     }
   },
   "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]

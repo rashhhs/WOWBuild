@@ -24,20 +24,7 @@
     }
   ],
   "mechanics":{
-    "values": ["icecap", "killing-machine", "murderous-efficiency", "icy-talons", "gathering-storm"],
-    "extra": {
-      "others": [
-        {
-          "subtitle": "",
-          "content": [
-          {
-            "title": "",
-            "content": ""
-          }
-          ]
-        }
-      ]
-    }
+    "values": ["icecap", "killing-machine", "murderous-efficiency", "icy-talons", "gathering-storm"]
   },
   "skills":{
     "values": ["pillar-of-frost", "obliterate", "frostscythe", "frost-strike", "remorseless-winter", "abomination-limb"],

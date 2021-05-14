@@ -114,22 +114,26 @@ const BuildDetail = () => {
         </View>
         {/* Secondary Statistics */}
         <TouchableOpacity
-          activeOpacity={hasSecondaryStatsExtraContent ? 0.8 : 1}
+          activeOpacity={hasSecondaryStatsExtraContent ? 0.4 : 1}
+          disabled={!hasSecondaryStatsExtraContent}
           onPress={() =>
-            hasSecondaryStatsExtraContent
-              ? navigate(SCREEN_BUILD_FRAGMENT, {
-                  title: translate('buildDetail.secondaries.orders'),
-                  contents: buildDetail?.secondaryStats.extra,
-                })
-              : {}
-          }>
+            navigate(SCREEN_BUILD_FRAGMENT, {
+              title: translate('buildDetail.secondaries.orders'),
+              contents: buildDetail?.secondaryStats.extra,
+            })
+          }
+          testID={'build-detail-secondary-stats-widget'}>
           <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
             <View style={apply(C.row, C.flex, C.justifyBetween)}>
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>
                 {translate('buildDetail.secondaries.orders')}
               </Text>
               {hasSecondaryStatsExtraContent ? (
-                <AwesomeIcon icon={'chevron-right'} size={32} />
+                <AwesomeIcon
+                  icon={'chevron-right'}
+                  size={32}
+                  testID={'build-detail-chevron-secondary-stats-widget'}
+                />
               ) : null}
             </View>
             {(buildDetail?.secondaryStats.order ?? []).map((stat, index) => (
@@ -156,14 +160,13 @@ const BuildDetail = () => {
         </View>
         {/* Mechanics */}
         <TouchableOpacity
-          activeOpacity={hasSecondaryStatsExtraContent ? 0.8 : 1}
+          activeOpacity={hasSecondaryStatsExtraContent ? 0.4 : 1}
+          disabled={!hasMechanicsExtraContent}
           onPress={() =>
-            hasMechanicsExtraContent
-              ? navigate(SCREEN_BUILD_FRAGMENT, {
-                  title: 'Mechanics',
-                  fragment: buildDetail?.mechanics.extra,
-                })
-              : {}
+            navigate(SCREEN_BUILD_FRAGMENT, {
+              title: 'Mechanics',
+              fragment: buildDetail?.mechanics.extra,
+            })
           }
           testID={'build-detail-mechanics-widget'}>
           <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
@@ -171,7 +174,13 @@ const BuildDetail = () => {
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>
                 {translate('buildDetail.mechanics')}
               </Text>
-              {hasMechanicsExtraContent ? <AwesomeIcon icon={'chevron-right'} size={32} /> : null}
+              {hasMechanicsExtraContent ? (
+                <AwesomeIcon
+                  icon={'chevron-right'}
+                  size={32}
+                  testID={'build-detail-chevron-mechanics-widget'}
+                />
+              ) : null}
             </View>
             {(buildDetail?.mechanics.values ?? []).map((mechanic, index) => (
               <Text variant={TextVariant.S} weight={FontWeight.Regular} key={index}>
@@ -182,15 +191,15 @@ const BuildDetail = () => {
         </TouchableOpacity>
         {/* Skills */}
         <TouchableOpacity
-          activeOpacity={hasSecondaryStatsExtraContent ? 0.8 : 1}
+          activeOpacity={hasSecondaryStatsExtraContent ? 0.4 : 1}
+          disabled={!hasSkillsExtraContent}
           onPress={() =>
-            hasSkillsExtraContent
-              ? navigate(SCREEN_BUILD_FRAGMENT, {
-                  title: 'Skills',
-                  fragment: buildDetail?.skills.extra,
-                })
-              : {}
-          }>
+            navigate(SCREEN_BUILD_FRAGMENT, {
+              title: 'Skills',
+              fragment: buildDetail?.skills.extra,
+            })
+          }
+          testID={'build-detail-skills-widget'}>
           <View style={apply(C.flex, C.m2, C.p2, C.radius2, C.bgPlatin)}>
             <View style={apply(C.row, C.flex, C.justifyBetween)}>
               <Text variant={TextVariant.L} weight={FontWeight.Regular}>

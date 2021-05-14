@@ -30,11 +30,14 @@ jest.mock('@react-navigation/native', () => ({
   useNavigation: mockHook({ goBack: () => {} }),
 }))
 
+const mockedNavigate = jest.fn(() => {
+  console.log('CALLED')
+})
 jest.mock('src/app/core/navigation/utils', () => ({
   useTabs: mockHook({
     showTabs: () => {},
   }),
-  navigate: () => {},
+  navigate: () => mockedNavigate(),
 }))
 
 React.useContext = mockUseContext
@@ -44,10 +47,20 @@ React.useContext = mockUseContext
   2. TODO: Fragments not clickable if hasn't extra content
 */
 describe('Build Detail', () => {
-  it('Fragments clickable', () => {
+  it('Fragments with content should be clickable', () => {
+    const { getByTestId } = render(<BuildDetail />)
+
+    const widgetSkills = getByTestId('build-detail-skills-widget')
+
+    fireEvent.press(widgetSkills)
+    expect(mockedNavigate).toHaveBeenCalledTimes(1)
+  })
+  //TODO: The chevron icon (AwesomeIcon) would be nice to check if there exists or not. But to be able test. Probably, it should be necessary to spread the render
+  it('Fragment without content should not be clickable ', () => {
     const { getByTestId } = render(<BuildDetail />)
 
     const widgetMechanics = getByTestId('build-detail-mechanics-widget')
     fireEvent.press(widgetMechanics)
+    expect(mockedNavigate).toHaveBeenCalledTimes(1)
   })
 })
