@@ -1,0 +1,8 @@
+{
+  "id": "murderous-efficiency",
+  "title": "Murderous Efficiency",
+  "image": "spell_frost_frostarmor.jpg",
+  "type": "Talent",
+  "rlevel": "Requires level 25",
+  "description": "Consuming the Killing Machine effect has a 50% chance to grant you 1 Rune"
+}

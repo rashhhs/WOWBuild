@@ -1,0 +1,9 @@
+{
+  "id": "inexorable-assault",
+  "title": "Inexorable Assault",
+  "image": "achievement_dungeon_icecrown_frostmourne.jpg",
+  "type": "Talent",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 15",
+  "description": "Gain Inexorable Assault every 8 sec, stacking up to 5 times. \n Obliterate and Frostscythe consumes a stack to deal an additional (21.4% of Attack power) Frost damage"
+}

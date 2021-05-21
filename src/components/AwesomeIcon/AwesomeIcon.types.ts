@@ -1,8 +1,9 @@
 import type { IconName, Transform } from '@fortawesome/fontawesome-svg-core'
 import type { ViewStyle } from 'react-native'
+import { GestureResponderEvent } from 'react-native'
 
-import type Color from '../../utils/Colors'
-import type { WithTestID } from '../../utils/types'
+import type Color from 'src/utils/Colors'
+import type { WithTestID } from 'src/utils/types'
 
 export enum AwesomeIconVariant {
   Brand = 'fab',
@@ -24,10 +25,16 @@ export enum AwesomeIconSize {
 
 export type AwesomeIconProps = WithTestID<{
   variant?: AwesomeIconVariant
+  containerStyle?: ViewStyle
   icon: IconName
   color?: Color
   size?: AwesomeIconSize
   style?: ViewStyle
+  onPress?: (event: GestureResponderEvent) => void
+  disabled?: boolean
+  rotate?: boolean
+  rotateDuration?: number
+  rotateOrientation?: 'ltr' | 'rtl'
   transform?: Transform
 }>
 

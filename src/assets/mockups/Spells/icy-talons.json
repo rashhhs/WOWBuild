@@ -1,0 +1,9 @@
+{
+  "id": "icy-talons",
+  "title": "Icy Talons",
+  "image": "spell_deathknight_icytalons.jpg",
+  "type": "Talent",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 15",
+  "description": "Your Runic Power spending abilities increase your melee attack speed y 5% for 6 sec , stacking up to 3 times"
+}

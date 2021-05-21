@@ -1,4 +1,5 @@
 import C, { boxShadow, classNames, extend, apply, theme } from 'consistencss'
+import { Easing } from 'react-native'
 
 import Color from './Colors'
 
@@ -32,5 +33,11 @@ extend({
   },
 })
 
-export { C, boxShadow, classNames, extend, apply, theme }
+const modalAnimation = {
+  0: { transform: [{ translateY: 700 }] },
+  1: { transform: [{ translateY: 0 }] },
+  easing: Easing.bezier(0.17, 0.59, 0.4, 0.77),
+}
+
+export { C, boxShadow, classNames, extend, apply, theme, modalAnimation }
 export default { C, boxShadow, classNames, extend, apply, theme }

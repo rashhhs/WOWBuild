@@ -1,0 +1,9 @@
+{
+  "id": "avalanche",
+  "title": "Avalanche",
+  "image": "spell_frost_icestorm.jpg",
+  "type": "Talent",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 35",
+  "description": "Casting Howling Blast with Rime active causes jagged icicles to fall on enemies nearby your target, dealing (21.4% Attack Power) Frost damage"
+}

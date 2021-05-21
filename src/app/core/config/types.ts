@@ -1,3 +1,10 @@
+import {
+  Ability as DKFrostAbility,
+  Talent as DKFrostTalent,
+  Conduit as DKFrostConduit,
+} from 'src/app/core/config/classes/deathKnight/frost/types'
+import { Generic } from 'src/utils/types'
+
 export enum Expansion {
   Vanilla = 'van',
   BurningCrusade = 'tbc',
@@ -49,4 +56,60 @@ export enum Weapon {
   Mace = 'mace',
   Sword = 'sword',
   TwoHanded = 'two-handed',
+}
+
+export const DEFAULT_SPELL: Spell = {
+  title: '',
+  type: '',
+  type2: '',
+  image: '',
+  cost: '',
+  yards: '',
+  rlevel: '',
+  rclass: '',
+  cooldown: '',
+  charges: '',
+  description: '',
+  id: '',
+  extraInfo: '',
+}
+
+export type SpellName = DKFrostAbility | DKFrostTalent | DKFrostConduit
+
+export type SpellsContextProps = {
+  spells: Generic<SpellName, Spell> | null
+
+  fetchSpells: () => void
+}
+
+export type BackendSpell = {
+  id: string
+  title: string
+  image: string
+  type?: string
+  type2?: string
+  cost?: string
+  yards?: string
+  charges?: string
+  cooldown?: string
+  rclass?: string
+  rlevel?: string
+  description: string
+  extraInfo?: string
+}
+
+export type Spell = {
+  id: string
+  title: string
+  image: string
+  type: string | null
+  type2: string | null
+  cost: string | null
+  yards: string | null
+  charges: string | null
+  cooldown: string | null
+  rclass: string | null
+  rlevel: string | null
+  description: string
+  extraInfo: string | null
 }

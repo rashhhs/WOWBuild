@@ -1,0 +1,9 @@
+{
+  "id": "killing-machine",
+  "title": "Killing Machine",
+  "type2": "Rank 2",
+  "image": "inv_sword_122.jpg",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 58",
+  "description": "Your auto attack critical strikes have a chance to make your next Obliterate deal Frost damage and critically strike"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "runic-empowerment",
+  "title": "Runic Empowerment",
+  "image": "inv_misc_rune_10.jpg",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 21",
+  "description": "Each Runic Power you spend has a 2.0% chance to instantly grant you a Rune"
+}

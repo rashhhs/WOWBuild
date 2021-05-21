@@ -39,6 +39,7 @@ export enum TextColor {
   action = '#4181f2',
   success = '#7ed321',
   warning = '#FF8833',
+  draft = '#D9CC56',
   disrupt = '#fd454d',
   support = '#777F8C',
   neutral = '#9FA5AE',

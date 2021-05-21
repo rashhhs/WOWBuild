@@ -1,0 +1,9 @@
+{
+  "id": "cold-heart",
+  "title": "Cold Heart",
+  "image": "spell_frost_frozencore.jpg",
+  "type": "Talent",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 15",
+  "description": "Every 2 sec, gain a stack of Cold Heart, causing your next Chains of Ice to deal (10.7% of Attack Power) Frost damage. Stacks up to 20 times"
+}

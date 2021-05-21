@@ -1,0 +1,9 @@
+{
+  "id": "icecap",
+  "title": "Icecap",
+  "image": "inv_misc_herb_icecap.jpg",
+  "type": "Talent",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 50",
+  "description": "Your Frost Strike, Frostscythe and Obliterate critical strikes reduce the remaining cooldown of Pillar of Frost y 4 sec"
+}
