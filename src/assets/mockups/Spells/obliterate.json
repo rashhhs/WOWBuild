@@ -1,0 +1,12 @@
+{
+  "id": "obliterate",
+  "title": "Obliterate",
+  "type2": "Rank 2",
+  "image": "spell_deathknight_classicon.jpg",
+  "cost": "2 Runes",
+  "yards": "Meele range",
+  "cast": "Instant",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 52",
+  "description": "A brutal attack that deals: \n - 2H: [66.2% of Attack Power] \n - DW: [(44.73% of Attack Power * 2)] \n\n Rank 2: Increase damage 20%"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "breath-of-sindragosa",
+  "title": "Breath of Sindragosa",
+  "image": "spell_deathknight_breathofsindragosa.jpg",
+  "type": "Talent",
+  "cost": "16 Runic Power per sec",
+  "cast": "Instant",
+  "cooldown": "2 min cooldown",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 50",
+  "description": "Continuously deal [(50.3% of Attack Power) * ((Attack Power * 0.98) with 2H or ((Attack Power + Offhand Attack Power) * 2/3 with DW] Frost damage every 1 sec to enemies in a cone in front of you, until your Runic Power is exhausted. Deals reduced damage to secondary targets",
+  "extraInfo": {
+    "description": "Generates 2 runes at the start and the end"
+  }
+}

@@ -1,20 +1,49 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { View } from 'react-native'
 import FastImage, { ImageStyle } from 'react-native-fast-image'
 
-import { Spell } from 'src/app/core/config/types'
+import { Spell, SpellExtraInfo } from 'src/app/core/config/types'
 import Text, { FontWeight, TextVariant } from 'src/components/Text'
 import { TextColor } from 'src/utils/Colors'
 import { apply, C } from 'src/utils/styles'
 
 const Tooltip = ({ spell }: { spell: Spell }) => {
+  const extraInfo = (info: SpellExtraInfo): ReactNode =>
+    info?.image && info?.title ? (
+      <>
+        <View style={apply(C.row, C.itemsCenter, C.mt2, C.mb1)}>
+          <FastImage
+            style={apply(C.w5, C.h5, C.radius1, C.mr2) as ImageStyle}
+            source={{
+              uri: info.image,
+            }}
+            resizeMode={FastImage.resizeMode.contain}
+          />
+          <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.white}>
+            {info.title}
+          </Text>
+        </View>
+        <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.draft}>
+          {info.description}
+        </Text>
+      </>
+    ) : (
+      <Text
+        variant={TextVariant.S}
+        weight={FontWeight.Regular}
+        color={TextColor.white}
+        style={C.mt2}>
+        {info.description}
+      </Text>
+    )
+
   return (
     <View style={apply(C.p2)}>
       <View style={apply(C.row, C.mb1)}>
         <FastImage
-          style={apply(C.w15, C.h15) as ImageStyle}
+          style={apply(C.w18, C.h18, C.radius2) as ImageStyle}
           source={{
-            uri: 'https://wow.zamimg.com/images/wow/icons/large/spell_frost_frostarmor.jpg',
+            uri: spell.image,
           }}
           resizeMode={FastImage.resizeMode.contain}
         />
@@ -24,10 +53,10 @@ const Tooltip = ({ spell }: { spell: Spell }) => {
             weight={FontWeight.Bold}
             color={TextColor.white}
             numberOfLines={1}
-            style={C.flex}>
+            style={apply(C.flex, C.itemsCenter)}>
             {spell.title}
           </Text>
-          <View style={apply(C.row, C.justifyBetween)}>
+          <View style={apply(C.flex, C.row, C.itemsCenter, C.justifyBetween)}>
             <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.neutral}>
               {spell?.type ?? ''}
             </Text>
@@ -35,16 +64,23 @@ const Tooltip = ({ spell }: { spell: Spell }) => {
               {spell?.type2 ?? ''}
             </Text>
           </View>
-          <View style={apply(C.row, C.justifyBetween)}>
+          <View style={apply(C.flex, C.row, C.itemsCenter, C.justifyBetween)}>
             <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.white}>
               {spell?.cost ?? ''}
-            </Text>
-            <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.white}>
-              {spell?.yards ?? ''}
             </Text>
           </View>
         </View>
       </View>
+      {spell?.cast || spell?.yards ? (
+        <View style={apply(C.row, C.justifyBetween)}>
+          <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.white}>
+            {spell?.cast ?? ''}
+          </Text>
+          <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.white}>
+            {spell?.yards ?? ''}
+          </Text>
+        </View>
+      ) : null}
       {spell?.charges || spell?.cooldown ? (
         <View style={apply(C.row, C.justifyBetween)}>
           <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.white}>
@@ -68,11 +104,7 @@ const Tooltip = ({ spell }: { spell: Spell }) => {
       <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.draft}>
         {spell.description}
       </Text>
-      {spell?.extraInfo ? (
-        <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.white}>
-          {spell.extraInfo}
-        </Text>
-      ) : null}
+      {spell?.extraInfo ? extraInfo(spell.extraInfo) : null}
     </View>
   )
 }

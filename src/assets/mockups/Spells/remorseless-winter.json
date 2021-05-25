@@ -1,0 +1,12 @@
+{
+  "id": "remorseless-winter",
+  "title": "Remorseless Winter",
+  "type2": "Rank 2",
+  "image": "ability_deathknight_remorselesswinters2.jpg",
+  "cost": "1 Rune",
+  "cast": "Instant",
+  "cooldown": "20 sec cooldown",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 34",
+  "description": "Drain the warmth of life from all nearby enemies within8 yards, dealing: \n - 2H: [(9 * (5.885% of Attack Power * (Attack Power * 0.98))] \n - DW: [(9 * (5.885% of Attack Power * ((Attack Power Main hand + Attack Power Off hand) * 2/3)))] \n\n Rank 2: Increase damage 20%"
+}

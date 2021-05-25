@@ -2,3 +2,5 @@
 2. Warcraft logs feature
 3. Prettier is not ordering test paths correctly
 4. Multi Games Architecture
+5. Tooltips must be prepared/configured for multi spec (like Death's Due spell). Create fields/properties for every spec could be a solution
+6. Bump Builds!

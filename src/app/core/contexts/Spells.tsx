@@ -2,19 +2,33 @@ import React, { createContext, ReactNode, useEffect, useState } from 'react'
 
 import { mapSpell } from 'src/app/core/config/mappers'
 import { Spell, SpellsContextProps } from 'src/app/core/config/types'
-import * as avalanche from 'src/assets/mockups/Spells/avalanche.json'
-import * as coldHeart from 'src/assets/mockups/Spells/cold-heart.json'
-import * as everfrost from 'src/assets/mockups/Spells/everfrost.json'
-import * as gatheringStorm from 'src/assets/mockups/Spells/gathering-storm.json'
-import * as icecap from 'src/assets/mockups/Spells/icecap.json'
-import * as icyTalons from 'src/assets/mockups/Spells/icy-talons.json'
-import * as inexorableAssault from 'src/assets/mockups/Spells/inexorable-assault.json'
-import * as killingMachine from 'src/assets/mockups/Spells/killing-machine.json'
-import * as mightFrozenWastes from 'src/assets/mockups/Spells/might-of-the-frozen-wastes.json'
-import * as murderousEfficiency from 'src/assets/mockups/Spells/murderous-efficiency.json'
-import * as obliteration from 'src/assets/mockups/Spells/obliteration.json'
-import * as rime from 'src/assets/mockups/Spells/rime.json'
-import * as runicEmpowerment from 'src/assets/mockups/Spells/runic-empowerment.json'
+import {
+  abominationLimb,
+  avalanche,
+  breathSindragosa,
+  coldHeart,
+  deathsDue,
+  empowerRune,
+  everfrost,
+  frostscythe,
+  frostStrike,
+  frostwyrmFury,
+  gatheringStorm,
+  howlingBlast,
+  hypothermicPresence,
+  icecap,
+  icyTalons,
+  inexorableAssault,
+  killingMachine,
+  mightFrozenWastes,
+  murderousEfficiency,
+  obliterate,
+  obliteration,
+  pillarFrost,
+  remorselessWinter,
+  rime,
+  runicEmpowerment,
+} from 'src/assets/mockups/Spells/spells'
 import { Generic } from 'src/utils/types'
 
 export const SpellsContext = createContext<Partial<SpellsContextProps>>({})
@@ -29,17 +43,29 @@ export const SpellsProvider = ({ children }: { children: ReactNode }) => {
   //TODO: Fetch from Backend
   const fetchSpells = () => {
     setSpells({
+      [abominationLimb.id]: mapSpell(abominationLimb),
       [avalanche.id]: mapSpell(avalanche),
+      [breathSindragosa.id]: mapSpell(breathSindragosa),
+      [deathsDue.id]: mapSpell(deathsDue),
       [coldHeart.id]: mapSpell(coldHeart),
+      [empowerRune.id]: mapSpell(empowerRune),
       [everfrost.id]: mapSpell(everfrost),
+      [frostStrike.id]: mapSpell(frostStrike),
+      [frostscythe.id]: mapSpell(frostscythe),
+      [frostwyrmFury.id]: mapSpell(frostwyrmFury),
       [gatheringStorm.id]: mapSpell(gatheringStorm),
+      [howlingBlast.id]: mapSpell(howlingBlast),
+      [hypothermicPresence.id]: mapSpell(hypothermicPresence),
       [icecap.id]: mapSpell(icecap),
       [icyTalons.id]: mapSpell(icyTalons),
       [inexorableAssault.id]: mapSpell(inexorableAssault),
       [killingMachine.id]: mapSpell(killingMachine),
       [mightFrozenWastes.id]: mapSpell(mightFrozenWastes),
       [murderousEfficiency.id]: mapSpell(murderousEfficiency),
+      [obliterate.id]: mapSpell(obliterate),
       [obliteration.id]: mapSpell(obliteration),
+      [pillarFrost.id]: mapSpell(pillarFrost),
+      [remorselessWinter.id]: mapSpell(remorselessWinter),
       [rime.id]: mapSpell(rime),
       [runicEmpowerment.id]: mapSpell(runicEmpowerment),
     })

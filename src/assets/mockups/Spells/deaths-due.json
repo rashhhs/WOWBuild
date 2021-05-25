@@ -1,0 +1,17 @@
+{
+  "id": "deaths-due",
+  "title": "Death's Due",
+  "type": "Covenant Ability",
+  "type2": "Night Fae",
+  "image": "ability_ardenweald_deathknight.jpg",
+  "cost": "1 Rune",
+  "yards": "30 yd range",
+  "cast": "Instant (ground)",
+  "cooldown": "30 sec recharge",
+  "charges": "1 Charges",
+  "rclass": "Requires Death Knight",
+  "description": "Corrupts de targeted ground, causing [(3.6036% of Attack Power) * 11] Shadow damage over 10 sec to targets within the area. \n Death's Due reduces damage enemies deal to you by 2%, up to a maximum of 8% and their power is transferred to you as an equal amount of Strength",
+  "extraInfo": {
+    "description": "While you remain within the area, your Obliterate will hit up to 1 additional target and inflict Death's Due for 12 sec"
+  }
+}

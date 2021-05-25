@@ -3,6 +3,7 @@ import {
   Talent as DKFrostTalent,
   Conduit as DKFrostConduit,
 } from 'src/app/core/config/classes/deathKnight/frost/types'
+import { Covenant, Legendary } from 'src/app/core/config/classes/types'
 import { Generic } from 'src/utils/types'
 
 export enum Expansion {
@@ -64,6 +65,7 @@ export const DEFAULT_SPELL: Spell = {
   type2: '',
   image: '',
   cost: '',
+  cast: '',
   yards: '',
   rlevel: '',
   rclass: '',
@@ -71,15 +73,31 @@ export const DEFAULT_SPELL: Spell = {
   charges: '',
   description: '',
   id: '',
-  extraInfo: '',
+  extraInfo: {
+    title: null,
+    image: null,
+    description: '',
+  },
 }
 
-export type SpellName = DKFrostAbility | DKFrostTalent | DKFrostConduit
+export type SpellName = Covenant | Legendary | DKFrostAbility | DKFrostTalent | DKFrostConduit
 
 export type SpellsContextProps = {
   spells: Generic<SpellName, Spell> | null
 
   fetchSpells: () => void
+}
+
+export type BackendSpellExtraInfo = {
+  image?: string
+  title?: string
+  description: string
+}
+
+export type SpellExtraInfo = {
+  image: string | null
+  title: string | null
+  description: string
 }
 
 export type BackendSpell = {
@@ -89,13 +107,14 @@ export type BackendSpell = {
   type?: string
   type2?: string
   cost?: string
+  cast?: string
   yards?: string
   charges?: string
   cooldown?: string
   rclass?: string
   rlevel?: string
   description: string
-  extraInfo?: string
+  extraInfo?: BackendSpellExtraInfo
 }
 
 export type Spell = {
@@ -105,11 +124,12 @@ export type Spell = {
   type: string | null
   type2: string | null
   cost: string | null
+  cast: string | null
   yards: string | null
   charges: string | null
   cooldown: string | null
   rclass: string | null
   rlevel: string | null
   description: string
-  extraInfo: string | null
+  extraInfo: SpellExtraInfo | null
 }

@@ -1,0 +1,17 @@
+{
+  "id": "howling-blast",
+  "title": "Howling Blast",
+  "type2": "Rank 2",
+  "image": "spell_frost_arcticwinds.jpg",
+  "cost": "1 Rune",
+  "yards": "30 yd Range",
+  "cast": "Instant",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 38",
+  "description": "Blast the target with a frigid wind, dealing: \n - 2H: [(14.37% of Attack Power) * (Attack Power * 0.98)] \n - DW: [(14.37% of Attack Power) * ((Attack Power Main hand + Attack Power Off hand) * 2/3)] \n Rank 2: Increase damage 20%",
+  "extraInfo": {
+    "image": "spell_deathknight_frostfever.jpg",
+    "title": "Frost Fever",
+    "description": "A disease that deals: \n -2H: [(171.2% of Attack Power) * (Attack Power * 0.98)] \n -DW: [(171.2% of Attack Power) * ((Attack Power Main hand + Attack Power Off hand) * 2/3)]"
+  }
+}

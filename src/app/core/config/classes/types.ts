@@ -42,7 +42,7 @@ export enum ClassSpecifics {
   Weapon = 'weapon',
 }
 
-//TODO (R): Here there are a mixture of general, class and specialitzation abilities. Would be nice if in the future this could be split it
+//For now, to be simplier, the class specific covenants will be all together. Lets see if its necessary to change that on the future
 export enum Covenant {
   AbominationLimb = 'abomination-limb',
   DeathsDue = 'deaths-due',
@@ -54,7 +54,7 @@ export enum Covenant {
   SwarmingMist = 'swarming-mist',
 }
 
-//TODO (R): Here there are a mixture of general, class and specialitzation abilities. Would be nice if in the future this could be split it
+//For now, to be simplier, the class specific covenants will be all together. Lets see if its necessary to change that on the future
 export enum Legendary {
   AbsoluteZero = 'absolute-zero',
   BitingCold = 'biting-cold',

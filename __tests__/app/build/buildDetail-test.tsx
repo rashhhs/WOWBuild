@@ -63,4 +63,6 @@ describe('Build Detail', () => {
     fireEvent.press(widgetMechanics)
     expect(mockedNavigate).toHaveBeenCalledTimes(1)
   })
+  //TODO: Null safe and return a simple text as a row if not exist
+  it('Hide spell if its not on the database', () => {})
 })
