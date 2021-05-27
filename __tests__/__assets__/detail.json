@@ -24,7 +24,7 @@
     }
   ],
   "mechanics":{
-    "values": ["icecap", "killing-machine", "murderous-efficiency", "icy-talons", "gathering-storm"]
+    "values": ["icecap", "killing-machine", "murderous-efficiency", "icy-talons", "gathering-storm", "invented-mechanic"]
   },
   "skills":{
     "values": ["pillar-of-frost", "obliterate", "frostscythe", "frost-strike", "remorseless-winter", "abomination-limb"],

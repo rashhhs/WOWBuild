@@ -5,6 +5,7 @@ import * as buildDetail from '../__assets__/detail.json'
 import { mockHook } from './utils'
 
 import { BuildsContext } from 'src/app/build/contexts/Builds'
+import * as icecap from 'src/assets/mockups/Spells/icecap.json'
 
 const BuildContextProvider = ({ children }: { children: ReactNode }) => (
   <BuildsContext.Provider value={{}}>{children}</BuildsContext.Provider>
@@ -23,4 +24,5 @@ export const mockUseContext = jest.fn().mockImplementation(() => ({
   build: buildDetail,
   fetchBuildDetail: mockFetchBuildDetail,
   clearBuildDetail: mockClearBuildDetail,
+  spells: [{ icecap: icecap }],
 }))

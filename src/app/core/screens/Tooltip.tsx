@@ -72,7 +72,7 @@ const Tooltip = ({ spell }: { spell: Spell }) => {
         </View>
       </View>
       {spell?.cast || spell?.yards ? (
-        <View style={apply(C.row, C.justifyBetween)}>
+        <View style={apply(C.row, C.justifyBetween)} testID={'view-container-cast-yards'}>
           <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.white}>
             {spell?.cast ?? ''}
           </Text>
@@ -82,11 +82,19 @@ const Tooltip = ({ spell }: { spell: Spell }) => {
         </View>
       ) : null}
       {spell?.charges || spell?.cooldown ? (
-        <View style={apply(C.row, C.justifyBetween)}>
-          <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.white}>
+        <View style={apply(C.row, C.justifyBetween)} testID={'view-container-charges-cooldown'}>
+          <Text
+            variant={TextVariant.S}
+            weight={FontWeight.Regular}
+            color={TextColor.white}
+            testID={'text-spell-charges'}>
             {spell?.charges ?? ''}
           </Text>
-          <Text variant={TextVariant.S} weight={FontWeight.Regular} color={TextColor.white}>
+          <Text
+            variant={TextVariant.S}
+            weight={FontWeight.Regular}
+            color={TextColor.white}
+            testID={'text-spell-cooldown'}>
             {spell?.cooldown ?? ''}
           </Text>
         </View>

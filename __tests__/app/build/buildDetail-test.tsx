@@ -30,9 +30,11 @@ jest.mock('@react-navigation/native', () => ({
   useNavigation: mockHook({ goBack: () => {} }),
 }))
 
-const mockedNavigate = jest.fn(() => {
-  console.log('CALLED')
-})
+jest.mock('react-native-modal', () => {})
+
+jest.mock('src/components/FancyModal/FancyModal', () => '')
+
+const mockedNavigate = jest.fn(() => {})
 jest.mock('src/app/core/navigation/utils', () => ({
   useTabs: mockHook({
     showTabs: () => {},
@@ -55,7 +57,7 @@ describe('Build Detail', () => {
     fireEvent.press(widgetSkills)
     expect(mockedNavigate).toHaveBeenCalledTimes(1)
   })
-  //TODO: The chevron icon (AwesomeIcon) would be nice to check if there exists or not. But to be able test. Probably, it should be necessary to spread the render
+  //TODO: The chevron icon (AwesomeIcon) would be nice to check if there exists or not. But, if we want to test this. Probably, it should be necessary to spread the render
   it('Fragment without content should not be clickable ', () => {
     const { getByTestId } = render(<BuildDetail />)
 
@@ -63,6 +65,10 @@ describe('Build Detail', () => {
     fireEvent.press(widgetMechanics)
     expect(mockedNavigate).toHaveBeenCalledTimes(1)
   })
-  //TODO: Null safe and return a simple text as a row if not exist
-  it('Hide spell if its not on the database', () => {})
+  it('Show plain on spells row, if there is not exist on the DB', () => {
+    const { getByText } = render(<BuildDetail />)
+
+    const inventedMechanic = getByText('invented-mechanic')
+    expect(inventedMechanic).toBeTruthy()
+  })
 })
