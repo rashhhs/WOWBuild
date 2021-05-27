@@ -6,7 +6,9 @@ import {
   abominationLimb,
   avalanche,
   breathSindragosa,
+  chillStreak,
   coldHeart,
+  deathchill,
   deathsDue,
   empowerRune,
   everfrost,
@@ -22,12 +24,14 @@ import {
   killingMachine,
   mightFrozenWastes,
   murderousEfficiency,
+  necroticAura,
   obliterate,
   obliteration,
   pillarFrost,
   remorselessWinter,
   rime,
   runicEmpowerment,
+  swarmingMist,
 } from 'src/assets/mockups/Spells/spells'
 import { Generic } from 'src/utils/types'
 
@@ -46,8 +50,10 @@ export const SpellsProvider = ({ children }: { children: ReactNode }) => {
       [abominationLimb.id]: mapSpell(abominationLimb),
       [avalanche.id]: mapSpell(avalanche),
       [breathSindragosa.id]: mapSpell(breathSindragosa),
-      [deathsDue.id]: mapSpell(deathsDue),
       [coldHeart.id]: mapSpell(coldHeart),
+      [chillStreak.id]: mapSpell(chillStreak),
+      [deathchill.id]: mapSpell(deathchill),
+      [deathsDue.id]: mapSpell(deathsDue),
       [empowerRune.id]: mapSpell(empowerRune),
       [everfrost.id]: mapSpell(everfrost),
       [frostStrike.id]: mapSpell(frostStrike),
@@ -62,12 +68,14 @@ export const SpellsProvider = ({ children }: { children: ReactNode }) => {
       [killingMachine.id]: mapSpell(killingMachine),
       [mightFrozenWastes.id]: mapSpell(mightFrozenWastes),
       [murderousEfficiency.id]: mapSpell(murderousEfficiency),
+      [necroticAura.id]: mapSpell(necroticAura),
       [obliterate.id]: mapSpell(obliterate),
       [obliteration.id]: mapSpell(obliteration),
       [pillarFrost.id]: mapSpell(pillarFrost),
       [remorselessWinter.id]: mapSpell(remorselessWinter),
       [rime.id]: mapSpell(rime),
       [runicEmpowerment.id]: mapSpell(runicEmpowerment),
+      [swarmingMist.id]: mapSpell(swarmingMist),
     })
   }
 

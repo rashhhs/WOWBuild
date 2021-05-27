@@ -1,0 +1,13 @@
+{
+  "id": "deathchill",
+  "title": "Deathchill",
+  "type": "Pvp Talent",
+  "image": "spell_frost_frostarmor.jpg",
+  "rclass": "Requires Death Knight",
+  "yards": "100 yd Range",
+  "cast": "Instant",
+  "description": "Your Remorseless Winter and Chains of Ice apply Deathchill, rooting the target in place for 4 sec",
+  "extraInfo": {
+    "description": "To develop!!!!"
+  }
+}

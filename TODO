@@ -1,6 +1,14 @@
-1. Link/Integration warcraft/wowhead tooltips (Hover feature?)
-2. Warcraft logs feature
-3. Prettier is not ordering test paths correctly
-4. Multi Games Architecture
-5. Tooltips must be prepared/configured for multi spec (like Death's Due spell). Create fields/properties for every spec could be a solution
-6. Bump Builds!
+
+Architecture:
+ - Multi Games Architecture (Lerna and find a way to encapsulate game business in a game module)
+
+Features:
+ - Warcraft logs feature
+ - Tooltips must be prepared/configured for multi spec (like Death's Due spell). Create fields/properties for every spec could be a solution
+ - General info build (build detail)
+ - Build Fragment: Add Tooltips
+ - Tooltips: Deathchill spell has 2 extraInfos (Remorseless Winter & Chain of Ice). And for now, it only be possible to have one. :)
+
+Chore:
+ - Prettier is not ordering test paths correctly
+ - Bump Builds! (World of Warcraft)
