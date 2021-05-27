@@ -24,19 +24,23 @@
     }
   ],
   "mechanics":{
-    "values": ["murderous-efficiency", "cold-heart", "killing-machine"],
+    "values": ["cold-heart","murderous-efficiency", "killing-machine"],
     "extra": {
       "others": [
         {
           "subtitle": "",
           "content": [
             {
-              "title": "murderous-efficiency",
-              "content": "Consume the effect of Killing Machine has a 50% to gain 1 rune"
+              "title": "cold-heart",
+              "content": "It turns one cc spell into a powerful frost attack. Because of this build focus on mastery and critic, this new spell damage synergies very well."
             },
             {
-              "title": "cold-heart",
-              "content": "Every 2 seconds, the death knight gain 1 accumulation up to 20. The next Chain of ice will do damage depending the number of accumulations"
+              "title": "murderous-efficiency",
+              "content": "Consuming [Killing Machine] can generate a rune, giving the chance to spend even more Runic Power. Important mechanic, especially, during the [Breath of Sindragosa's] window"
+            },
+            {
+              "title": "killing-machine",
+              "content": "It provokes that the next [Obliterate] deals frost damage and be critic. The frost part it's quite significant, because the main stat of the build is mastery. Besides that, the second secondary stat is the critic, having a good chance to generate critic continuously"
             }
           ]
         }
@@ -44,11 +48,11 @@
     }
   },
   "skills":{
-    "values": ["breath-of-sindragosa", "pillar-of-frost", "empower-rune-weapon", "hypothermic-presence", "obliterate", "frostwyrms-fury"],
+    "values": ["breath-of-sindragosa", "pillar-of-frost", "empower-rune-weapon", "swarming-mist", "obliterate", "frostwyrms-fury"],
     "extra": {
       "key": {
         "title": "breath-of-sindragosa",
-        "content": "Breath of frost that does damage in cone in front of the character to all enemies.This ability is channeled and consumes a lot fo runic power.\n Meanwhile the ability is channeled the player has to generate as much runic power as could\n We will search a way to improve the damage during the channeling of Breath of Sindragosa with empowering skills and generating skill of runic power"
+        "content": "Breath of frost that does damage in cone in front of the character to all enemies.This ability is channeled and consumes a lot of runic power.\n Meanwhile the ability is channeled, the player has to generate as much runic power as possible \n We will search ways to improve the damage during the channeling of Breath of Sindragosa, like empowering skills and generating skill of Runic Power"
       },
       "others": [
         {
@@ -56,15 +60,19 @@
           "content": [
             {
             "title": "pillar-of-frost",
-            "content": "The skill will improve the strength in 15%, +1% for every rune spent meanwhile the skill is active.\n This skill has a lot of sinergy with Breath of Sindragosa, because in order to keep 'up' the Breath, the death knight has to keep spending runes"
+            "content": "The skill will improve the strength in 15%, +1% for every rune spent meanwhile the skill is active.\n This skill has a lot of synergy with Breath of Sindragosa, because in order to keep 'up' the Breath, the death knight has to keep spending runes accumulating more strength in the process"
             },
             {
               "title": "empower-rune-weapon",
-              "content": "This skill will increase the haste, giving the chance to attack and generate more runes"
+              "content": "This skill will increase the haste, giving the chance to attack and generate more runes."
+            },
+            {
+              "title": "swarming-mist",
+              "content": "Fog that envelops the death knight improving the dodge in 10%, meanwhile, the spell is up. But more importantly, every time, the spell damages an enemy the death knight wins 3 of Runic Power, up to 15 Runic Power per tick scaling by the number of enemies damaged at the same time. Being almost impossible to run out of Runic Power meanwhile this spell is active"
             },
             {
               "title": "hypothermic-presence",
-              "content": "Skill that will reduce in a 35% the amount of runic power spent for every skill. Excellent skill to help the death knight during the start of the Breath, enabling him to activate other skills and not being aware of runic power during the first 8 seconds"
+              "content": "Skill that will reduce in a 35% the amount of runic power spent for every skill. Excellent skill to help the death knight during the start of the Breath, enabling him to activate other skills and not being extremely aware of Runic Power during the first 8 seconds"
             }
           ]
         },
@@ -73,7 +81,7 @@
           "content": [
             {
             "title": "obliterate",
-            "content": "Main ability to spent runes and generate runic power in the process, needed for the Breath of Sindragosa"
+            "content": "Main ability to spent Runes and generate Runic Power. Main spell to keep helping [Breath of Sindragosa] being up"
           }]
         },
         {

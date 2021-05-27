@@ -10,8 +10,8 @@
     "order": ["mastery", "haste", "critic", "versatility"],
     "mastery": null,
     "haste": "12 - 20",
-    "versatility": null,
     "critic": "10 - 15",
+    "versatility": null,
     "extra": [
       {
         "title": "mastery",
@@ -19,15 +19,15 @@
       },
       {
         "title": "haste",
-        "content": "This build is based in hit strongly with critic Obliterates. And because of being a build with two handed weapons, the speed of the base attacks are slow. That's why improve the attack speed with haste is mandatory.\n The most important part, it will be during the Obliteration phase and the death knight must have between 35-65% os haste during those phases, in order to spam critics with Obliterate"
+        "content": "This build is based in hit strongly with critic [Obliterates]. And because of being a build with two handed weapons, the speed of the base attacks are slow. That's why, improve the attack speed with haste is mandatory.\n The most important part, it will be during the [Obliteration] phase and the death knight must have between 35-65% os haste during those phases, in order to spam critics with [Obliterate] \n * Haste breakpoint: 12% - 25% - 37,62% - 50%"
       },
       {
         "title": "critic",
-        "content": "This statistic would be less important, because Obliteration phase it creates a lot of Killing Machines. \n But, generate some critics outside the Obliteration phase might be better than gives extra damage to the critics inside the Obliteration"
+        "content": "This statistic would be less important, because [Obliteration] phase it creates a lot of [Killing Machines]. \n But, generate some critics outside the [Obliteration] phase might be better than gives extra damage to the critics inside the [Obliteration]"
       },
       {
         "title": "versatility",
-        "content": "Less important secondary, it will be only choose, if we haven't other better options"
+        "content": "Less important secondary, it will be only choose it, if we haven't other better options"
       }
     ]
   },
@@ -81,7 +81,7 @@
     "extra": {
       "key": {
         "title": "Obliterate",
-        "content": "Basic physical strike of the frost death knight. When Killing Machine is active, it deals always a critically hit and the damage is frost. Dealing super strikes with a lot of damage.\n That's why, we will search ways to improve that strikes"
+        "content": "Basic physical strike of the frost death knights. When [Killing Machine] is active, it deals always a critically hit and the damage is frost. Dealing super strikes with a lot of damage.\n That's why, we will search ways to improve those strikes"
       },
       "others": [
         {
@@ -89,7 +89,7 @@
           "content": [
             {
               "title": "pillar-of-frost",
-              "content": "This skill will increase the strength a lot and triggers the Obliteration mechanic. Provoking basic skills of the death knight will trigger a Killing Machine"
+              "content": "This skill will increase the strength a lot, and triggers the [Obliteration] mechanic. Provoking basic skills of the death knight generating extra [Killing Machines]"
             }
           ]
         },
@@ -111,7 +111,7 @@
   },
   "talents":{
     "values": ["inexorable-assault", "murderous-efficiency", "asphyxiate", "avalanche", "gathering-storm", "obliteration"],
-    "pvp": [""]
+    "pvp": ["chill-streak", "necrotic-aura", "deathchill"]
   },
   "covenantLegendary": {
     "covenant": {

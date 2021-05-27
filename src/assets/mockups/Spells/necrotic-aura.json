@@ -1,0 +1,10 @@
+{
+  "id": "necrotic-aura",
+  "title": "Necrotic Aura",
+  "type": "Pvp Talent",
+  "image": "ability_deathknight_decomposingaura.jpg",
+  "yards": "15 yd Range",
+  "cast": "Instant",
+  "rclass": "Requires Death Knight",
+  "description": "All enemies within 8 yds take 8% increased magical damage"
+}
