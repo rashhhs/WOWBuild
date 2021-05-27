@@ -11,6 +11,21 @@ export type WithTestID<T = {}> = T & { testID?: string }
 
 export type VoidFunction = () => void
 
+export type VisibleToggle = {
+  open: VoidFunction
+  close: VoidFunction
+}
+
+export type Point = {
+  x: number
+  y: number
+}
+
+export type Size = {
+  width: number
+  height: number
+}
+
 export type Timestamp = number
 
 export type RootStackParamList = {

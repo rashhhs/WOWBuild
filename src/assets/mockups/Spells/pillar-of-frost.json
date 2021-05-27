@@ -1,0 +1,11 @@
+{
+  "id": "pillar-of-frost",
+  "title": "Pillar of Frost",
+  "type2": "Rank 2",
+  "image": "ability_deathknight_pillaroffrost.jpg",
+  "cast": "Instant",
+  "cooldown": "1 min cooldown",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 49",
+  "description": "The power of frost increases your Strength by 20% for 12 sec. \n Each Rune spent while active increases your Strength y an additional 1%"
+}

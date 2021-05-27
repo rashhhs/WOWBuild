@@ -1,0 +1,10 @@
+{
+  "id": "everfrost",
+  "title": "Everfrost",
+  "image": "ability_mage_deepfreeze.jpg",
+  "type": "Soulbind Conduit",
+  "type2": "Potency Conduit",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 60",
+  "description": "Remorseless Winter deals [3.00% - ?] increased damage to enemies it hits, stacking up to 0 times"
+}

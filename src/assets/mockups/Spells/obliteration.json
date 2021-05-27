@@ -1,0 +1,9 @@
+{
+  "id": "obliteration",
+  "title": "Obliteration",
+  "image": "inv_axe_114.jpg",
+  "type": "Talent",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 50",
+  "description": "While Pillar of Frost is active, Frost Strike, Glacial Advance and Howling Blast grant Killing Machine and have a 30% chance to generate a Rune"
+}

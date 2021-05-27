@@ -1,0 +1,14 @@
+{
+  "id": "hypothermic-presence",
+  "title": "Hypothermic Presence",
+  "type": "Talent",
+  "image": "ability_mage_shattershield.jpg",
+  "cast": "Instant",
+  "cooldown": "45 sec cooldown",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 45",
+  "description": "Embrace the ice in your veins, reducing the Runic Power cost of your abilities by 35% for 8 sec",
+  "extraInfo": {
+    "description": "Does not trigger the global cooldown"
+  }
+}

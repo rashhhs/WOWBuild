@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import {
   SCREEN_BUILD_DETAIL,
@@ -16,6 +16,7 @@ import BuildsProvider from 'src/app/build/contexts/Builds'
 import BuildDetail from 'src/app/build/screens/BuildDetail'
 import BuildFragment from 'src/app/build/screens/BuildFragment'
 import Builds from 'src/app/build/screens/Builds'
+import SpellsProvider from 'src/app/core/contexts/Spells'
 import { tabBarItem } from 'src/app/core/navigation/utils'
 import Color from 'src/utils/Colors'
 import { C, apply } from 'src/utils/styles'
@@ -70,9 +71,11 @@ const AppStack = () => {
 
 const AppNavigator = () => {
   return (
-    <Stack.Navigator headerMode="none">
-      <Stack.Screen name={STACK_APP} component={AppStack} options={options} />
-    </Stack.Navigator>
+    <SpellsProvider>
+      <Stack.Navigator headerMode="none">
+        <Stack.Screen name={STACK_APP} component={AppStack} options={options} />
+      </Stack.Navigator>
+    </SpellsProvider>
   )
 }
 

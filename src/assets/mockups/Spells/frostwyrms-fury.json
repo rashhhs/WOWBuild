@@ -1,0 +1,10 @@
+{
+  "id": "frostwyrms-fury",
+  "title": "Frostwyrm's Fury",
+  "image": "achievement_boss_sindragosa.jpg",
+  "cast": "Instant",
+  "cooldown": "3 min cooldown",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 44",
+  "description": "Summons a frostwyrm who breathes on all enemies within 40 yd in front of you, dealing (321% of Attack Power) Frost damage and slowing movement speed by 50% for 10 sec"
+}

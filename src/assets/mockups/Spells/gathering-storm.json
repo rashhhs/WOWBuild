@@ -1,0 +1,9 @@
+{
+  "id": "gathering-storm",
+  "title": "Gathering Storm",
+  "image": "spell_frost_ice-shards.jpg",
+  "type": "Talent",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 45",
+  "description": "Each Rune spent during Remorseless Winter increases its damage by 10%, and extends its duration by 0.5 sec"
+}

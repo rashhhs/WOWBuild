@@ -1,0 +1,15 @@
+{
+  "id": "abomination-limb",
+  "title": "Abomination Limb",
+  "type": "Covenant Ability",
+  "type2": "Necrolord",
+  "image": "ability_maldraxxus_deathknight.jpg",
+  "yards": "20 yd range",
+  "cooldown": "2 min cooldown",
+  "cast": "Instant",
+  "rclass": "Requires Death Knight",
+  "description": "Sprout an additional limb, dealing [(23.67% of Attack Power) * 13] Shadow damage over 12 sec to nearby enemies. Every 1 sec, an enemy is pulled to you location if they are further than 8 yds from you. The same enemy can only be pulled once every 8 sec",
+  "extraInfo": {
+    "description": "Gain Rime instantly, and again every 6 sec"
+  }
+}

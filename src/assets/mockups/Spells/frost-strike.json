@@ -1,0 +1,12 @@
+{
+  "id": "frost-strike",
+  "title": "Frost Strike",
+  "type2": "Rank 2",
+  "image": "spell_deathknight_empowerruneblade2.jpg",
+  "cost": "25 Runic Power",
+  "yards": "Meele Range",
+  "cast": "Instant",
+  "rclass": "Requires Death Knight (frost)",
+  "rlevel": "Requires level 43",
+  "description": "Chill your weapon with icy power and quickly strike the enemy dealing: \n -2H: [49.1% of Attack Power] \n -DW: [(33.17% of Attack Power * 2)] \n\n Rank 2: Increase damage 20%"
+}
